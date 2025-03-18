@@ -25,12 +25,13 @@ if response.status_code == 200:
         year = paper.get("year", "Unknown")
         
         authors_list = paper.get("authors", [])  # Get authors list, or empty list if missing
-
         # Extract the first author's ID 
         if authors_list and isinstance(authors_list, list):  
             first_author = authors_list[0].get("authorId", "N/A")  # Get first author's ID
+            other_authors = [author.get("authorId", "N/A") for author in authors_list[1:]]  # Get all other author IDs
         else:
-            first_author = "N/A"  # Default if no authors
+            first_author = "N/A"
+            other_authors = []  # No other authors
 
         citation_count = paper.get("citationCount", 0)
         publication_types = paper.get("publicationTypes", [])
@@ -74,6 +75,7 @@ if response.status_code == 200:
                 "title": title,
                 "year": year,
                 "firstAuthor": first_author,
+                "otherAuthors": other_authors,
                 "venueId": venue_id,
                 "venue": venue_name,
                 "venueType": venue_type,
@@ -87,6 +89,7 @@ if response.status_code == 200:
                 "title": title,
                 "year": year,
                 "firstAuthor" : first_author,
+                "otherAuthors": other_authors,
                 "venueId": venue_id,
                 "venue": venue_name,
                 "venueType": venue_type,
@@ -118,13 +121,14 @@ if response.status_code == 200:
         for author in paper.get("authors", []):
             author_id = author.get("authorId", "Unknown")
             author_name = author.get("name", "Unknown")
-            author_name = author.get("paperCount", "Unknown")
+            paper_Count = author.get("paperCount", "Unknown")
             affiliations = author.get("affiliations", [])
 
             if author_id not in authors:
                 authors[author_id] = {
                     "authorId": author_id,
                     "name": author_name,
+                    "paper_Count" : paper_Count,
                     "affiliations": affiliations
                 }
 
