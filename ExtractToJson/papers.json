@@ -1,0 +1,190 @@
+[
+    {
+        "paperId": "a2a514ed839dafdd0fb76d6c2615f25f35bf8087",
+        "title": "Testing Graph Database Engines via Query Partitioning",
+        "year": 2023,
+        "firstAuthor": "1663632797",
+        "venueId": "289bfdda-eab3-4c9a-97be-ef1e0f9ddfc0",
+        "venue": "International Symposium on Software Testing and Analysis",
+        "venueType": "conference",
+        "citationCount": 23
+    },
+    {
+        "paperId": "6c755fc901d0b41a5d73c265f64a5aacf62e83b8",
+        "title": "GDsmith: Detecting Bugs in Cypher Graph Database Engines",
+        "year": 2023,
+        "firstAuthor": "2171106811",
+        "venueId": "289bfdda-eab3-4c9a-97be-ef1e0f9ddfc0",
+        "venue": "International Symposium on Software Testing and Analysis",
+        "venueType": "conference",
+        "citationCount": 15
+    },
+    {
+        "paperId": "61c931d50f3e32f70abf1bccddf2479212dd2fde",
+        "title": "MillenniumDB: An Open-Source Graph Database System",
+        "year": 2023,
+        "firstAuthor": "2434366",
+        "venueId": "f80a2e54-1332-48bf-9634-4b2f77fca809",
+        "venue": "Data Intelligence",
+        "venueType": "journal",
+        "volume": "5",
+        "citationCount": 13,
+        "pages": "560-610"
+    },
+    {
+        "paperId": "2c3eef2f17369912e330281d54b535675077e4ca",
+        "title": "Representing Paths in Graph Database Pattern Matching",
+        "year": 2023,
+        "firstAuthor": "144352362",
+        "venueId": "fcbcaf18-8ab1-43e1-a973-604bbc7e344e",
+        "venue": "Proceedings of the VLDB Endowment",
+        "venueType": "journal",
+        "volume": "16",
+        "citationCount": 16,
+        "pages": "1790-1803"
+    },
+    {
+        "paperId": "e67a2817089312746d69b38ce9abfdc4b1bc69c3",
+        "title": "Finding bugs in Gremlin-based graph database systems via Randomized differential testing",
+        "year": 2022,
+        "firstAuthor": "2158585032",
+        "venueId": "289bfdda-eab3-4c9a-97be-ef1e0f9ddfc0",
+        "venue": "International Symposium on Software Testing and Analysis",
+        "venueType": "conference",
+        "citationCount": 29
+    },
+    {
+        "paperId": "fe4c5074f021cd1c810892c1b6bc267b23aa6e5c",
+        "title": "Fraud detection in the distributed graph database",
+        "year": 2022,
+        "firstAuthor": "144615268",
+        "venueId": "f1d0ef3d-4e90-41e9-b454-f589a933654f",
+        "venue": "Cluster Computing",
+        "venueType": "journal",
+        "volume": "26",
+        "citationCount": 17,
+        "pages": "515-537"
+    },
+    {
+        "paperId": "d1ae4ab5047489c2b010c7ce72262982ad66ad60",
+        "title": "ByteGraph: A High-Performance Distributed Graph Database in ByteDance",
+        "year": 2022,
+        "firstAuthor": "2145413970",
+        "venueId": "fcbcaf18-8ab1-43e1-a973-604bbc7e344e",
+        "venue": "Proceedings of the VLDB Endowment",
+        "venueType": "journal",
+        "volume": "15",
+        "citationCount": 19,
+        "pages": "3306-3318"
+    },
+    {
+        "paperId": "75a8faa6861b7fdd49b36615df1835f1c4bbcb65",
+        "title": "G-Tran: A High Performance Distributed Graph Database with a Decentralized Architecture",
+        "year": 2022,
+        "firstAuthor": "2108844303",
+        "venueId": "fcbcaf18-8ab1-43e1-a973-604bbc7e344e",
+        "venue": "Proceedings of the VLDB Endowment",
+        "venueType": "journal",
+        "volume": "15",
+        "citationCount": 12,
+        "pages": "2545-2558"
+    },
+    {
+        "paperId": "5534c3b8bfe03ec0ee3ea3aafd0a4471b07f8b7d",
+        "title": "Query-based Performance Comparison of Graph\u00a0Database and Relational Database",
+        "year": 2022,
+        "firstAuthor": "10313020",
+        "venueId": "8f515bf7-e3c7-4242-85e5-14de4c29e76c",
+        "venue": "Symposium on Information and Communication Technology",
+        "venueType": "conference",
+        "citationCount": 7
+    },
+    {
+        "paperId": "7bb477077968d68aa7a6059d8d6d801fb28274da",
+        "title": "Credit Card Fraud Detection Technique by Applying Graph Database Model",
+        "year": 2021,
+        "firstAuthor": "70209653",
+        "venueId": "9bc76c9a-64ac-4dd9-902e-80fccca1833f",
+        "venue": "The Arabian journal for science and engineering",
+        "venueType": "journal",
+        "volume": "46",
+        "citationCount": 21,
+        "pages": "1 - 20"
+    },
+    {
+        "paperId": "21042565ec941f4fa31ac5a0af85a1a84ff21f1b",
+        "title": "Integration Strategy and Tool between Formal Ontology and Graph Database Technology",
+        "year": 2021,
+        "firstAuthor": "1725650",
+        "venueId": "ccd8e532-73c6-414f-bc91-271bbb2933e2",
+        "venue": "Electronics",
+        "venueType": "journal",
+        "volume": "N/A",
+        "citationCount": 22,
+        "pages": "N/A"
+    },
+    {
+        "paperId": "9b3e8d202488dc29e601fc471a25a2af9002659e",
+        "title": "IFC-Based 4D Construction Management Information Model of Prefabricated Buildings and Its Application in Graph Database",
+        "year": 2021,
+        "firstAuthor": "98831679",
+        "venueId": "136edf8d-0f88-4c2c-830f-461c6a9b842e",
+        "venue": "Applied Sciences",
+        "venueType": "journal",
+        "volume": "N/A",
+        "citationCount": 13,
+        "pages": "N/A"
+    },
+    {
+        "paperId": "09f54c64b39f5f7e7570f9f4ce3e3af544401e14",
+        "title": "A Quantitative Analysis of Student Solutions to Graph Database Problems",
+        "year": 2021,
+        "firstAuthor": "153314895",
+        "venueId": "e82485bc-2195-4cf5-9f9a-012501918b2f",
+        "venue": "Annual Conference on Innovation and Technology in Computer Science Education",
+        "venueType": "conference",
+        "citationCount": 8
+    },
+    {
+        "paperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "title": "GDBAlive: A Temporal Graph Database Built on Top of a Columnar Data Store",
+        "year": 2020,
+        "firstAuthor": "2148303656",
+        "venueId": "f4784c7b-6592-49eb-a116-7290e0398868",
+        "venue": "Journal of Advances in Information Technology",
+        "venueType": "journal",
+        "volume": "N/A",
+        "citationCount": 13,
+        "pages": "N/A"
+    },
+    {
+        "paperId": "a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358",
+        "title": "An Empirical Study on Recent Graph Database Systems",
+        "year": 2020,
+        "firstAuthor": "2115256817",
+        "venueId": "3e22d1e0-9b11-40a4-ac7c-0ebe5825316e",
+        "venue": "Knowledge Science, Engineering and Management",
+        "venueType": "conference",
+        "citationCount": 14
+    },
+    {
+        "paperId": "91d6e8ba5dd90b02fe3bd870b19da13a6167af53",
+        "title": "The Property Graph Database Model",
+        "year": 2018,
+        "firstAuthor": "2772109",
+        "venueId": "66257d67-2035-4ff6-b62a-4099db02fcde",
+        "venue": "Alberto Mendelzon Workshop on Foundations of Data Management",
+        "venueType": "conference",
+        "citationCount": 151
+    },
+    {
+        "paperId": "33e332837e91c1048c3ed165cd16bf7607c3bf06",
+        "title": "Issues and Concepts of Graph Database and a Comparative Analysis on list of Graph Database tools",
+        "year": 2020,
+        "firstAuthor": "152781515",
+        "venueId": "66c268f7-ba60-443f-919d-e2c297910401",
+        "venue": "International Conference on Computational Collective Intelligence",
+        "venueType": "conference",
+        "citationCount": 11
+    }
+]
