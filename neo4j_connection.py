@@ -1,50 +1,56 @@
 from neo4j import GraphDatabase
-import requests
+import csv
+import os
 
 # Connect to Neo4j
-NEO4J_URI = "neo4j://localhost:7687"  # Use your actual DBMS URL
-USERNAME = "neo4j"  # Change if needed
-PASSWORD = "julecharlotte"
+uri = "bolt://localhost:7687"
+username = "neo4j"
+password = "yourpassword"  # Change this
 
-query = "learning | machine"
-fields = "paperId,title,year,abstract,venue,citationCount,authors"
+driver = GraphDatabase.driver(uri, auth=(username, password))
 
-driver = GraphDatabase.driver(NEO4J_URI, auth=(USERNAME, PASSWORD))
-url = f"http://api.semanticscholar.org/graph/v1/paper/search/bulk?query={query}&fields={fields}&year=2024-"
-
-
-# Function to insert data
-def insert_paper(tx, paper_id, title, year, venue, citation_count):
-    query = """
-    MERGE (p:Paper {paperId: $paper_id})
-    SET p.title = $title, p.year = $year, p.venue = $venue, p.citationCount = $citation_count
-    """
-    tx.run(query, paper_id=paper_id, title=title, year=year, venue=venue, citation_count=citation_count)
-
-# Load data into Neo4j
-def load_data_into_neo4j(papers):
+# Function to execute a Cypher query
+def run_query(query, params=None):
+    """Execute a Cypher query."""
     with driver.session() as session:
-        for paper in papers:
-            session.write_transaction(
-                insert_paper, 
-                paper.get("paperId"), 
-                paper.get("title", "Unknown"), 
-                paper.get("year", 0), 
-                paper.get("venue", "Unknown"), 
-                paper.get("citationCount", 0)
-            )
-    print("Data successfully inserted into Neo4j!")
+        session.run(query, parameters=params)
 
-url = f"http://api.semanticscholar.org/graph/v1/paper/search/bulk?query={query}&fields={fields}&year=2024-"
+# Step 1: Create uniqueness constraints (adjust based on your CSV files)
+create_constraints_queries = [
+    "CREATE CONSTRAINT IF NOT EXISTS FOR (a:Author) REQUIRE a.authorId IS UNIQUE;",
+    "CREATE CONSTRAINT IF NOT EXISTS FOR (p:Paper) REQUIRE p.paperId IS UNIQUE;",
+    "CREATE CONSTRAINT IF NOT EXISTS FOR (j:Journal) REQUIRE j.name IS UNIQUE;",
+    "CREATE CONSTRAINT IF NOT EXISTS FOR (e:Event) REQUIRE e.name IS UNIQUE;"
+]
 
+for query in create_constraints_queries:
+    run_query(query)
 
-# Fetch papers
-response = requests.get(url)
-if response.status_code == 200:
-    papers = response.json()["data"]
-    load_data_into_neo4j(papers)
-else:
-    print(f"Error fetching data: {response.status_code}, {response.text}")
+# Folder containing the CSV files
+folder_path = "./data"  # Update with your actual folder
 
-# Close connection
+# Step 2: Import CSV files as Nodes
+def import_csv_to_neo4j(csv_path, label):
+    """Import CSV data as nodes into Neo4j"""
+    with open(csv_path, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            properties = ", ".join([f"{key}: ${key}" for key in row.keys()])
+            query = f"MERGE (n:{label} {{ {properties} }})"
+            run_query(query, row)
+
+# Process all CSV files in the folder
+for filename in os.listdir(folder_path):
+    if filename.endswith(".csv"):
+        csv_path = os.path.join(folder_path, filename)
+        label = filename.replace(".csv", "")  # Use filename as Neo4j label
+
+        print(f"📥 Importing {csv_path} as `{label}` nodes...")
+        import_csv_to_neo4j(csv_path, label)
+        print(f"✅ `{label}` nodes imported successfully!")
+
+print("🎉 All CSV data successfully imported into Neo4j!")
+
+# Close Neo4j connection
 driver.close()
+
