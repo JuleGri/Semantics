@@ -5,7 +5,7 @@ import os
 # Connect to Neo4j
 uri = "bolt://localhost:7687"
 username = "neo4j"
-password = "yourpassword"  # Change this
+password = "itsjuleandcharlotte"  # Change this
 
 driver = GraphDatabase.driver(uri, auth=(username, password))
 
@@ -14,6 +14,16 @@ def run_query(query, params=None):
     """Execute a Cypher query."""
     with driver.session() as session:
         session.run(query, parameters=params)
+
+#Step 0: delete previous nodes and relationships
+def clear_database():
+    """Completely resets the database, removing all nodes, relationships, labels, and property keys."""
+    with driver.session() as session:
+        session.run("MATCH (n) DETACH DELETE n")  # Delete nodes & relationships
+        session.run("CALL apoc.schema.assert({}, {})")  # Remove constraints and indexes
+        #session.run("CALL apoc.schema.node.clean(false)")  # Remove all labels & property keys
+    print("Database fully cleared: all nodes, relationships, labels, and property keys deleted.")
+clear_database()
 
 # Step 1: Create uniqueness constraints (adjust based on your CSV files)
 create_constraints_queries = [
@@ -27,7 +37,7 @@ for query in create_constraints_queries:
     run_query(query)
 
 # Folder containing the CSV files
-folder_path = "./data"  # Update with your actual folder
+folder_path = "./CSVfiles"  # Update with your actual folder
 
 # Step 2: Import CSV files as Nodes
 def import_csv_to_neo4j(csv_path, label):
