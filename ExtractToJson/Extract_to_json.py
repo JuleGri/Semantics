@@ -1,9 +1,10 @@
 import requests
 import json
+import random
 
 # API Request Parameters
 query = "Graph Database"
-fields = "paperId,title,year,venue,publicationVenue,journal,abstract,publicationTypes,citationCount,authors,references,citations"
+fields = "paperId,title,year,venue,publicationVenue,influentialCitationCount,journal,abstract,publicationTypes,citationCount,authors,references,citations"
 limit = 25
 
 # API Request URL
@@ -23,6 +24,7 @@ if response.status_code == 200:
         paper_id = paper.get("paperId", "N/A")
         title = paper.get("title", "N/A")
         year = paper.get("year", "Unknown")
+        abstract = paper.get("abstract", "N/A")
         
         authors_list = paper.get("authors", [])  # Get authors list, or empty list if missing
         # Extract the first author's ID 
@@ -34,6 +36,7 @@ if response.status_code == 200:
             other_authors = []  # No other authors
 
         citation_count = paper.get("citationCount", 0)
+        influential_citation_count = paper.get("influentialCitationCount", 0)
         publication_types = paper.get("publicationTypes", [])
         venue_id = paper["publicationVenue"]["id"] if paper.get("publicationVenue") else "N/A"
         venue_name = paper["publicationVenue"]["name"] if paper.get("publicationVenue") else "N/A"
@@ -67,6 +70,8 @@ if response.status_code == 200:
                 pages = "N/A"  # Default if journal_data is None or missing keys
             journal_name = paper["journal"]["name"] if paper.get("journal") else "Unknown Journal"
         
+        ######################## STORE PAPER INFO COLLECTED #######################################
+
 
         # Store paper information differently based on venue type
         if venue_type == "journal":
@@ -79,8 +84,10 @@ if response.status_code == 200:
                 "venueId": venue_id,
                 "venue": venue_name,
                 "venueType": venue_type,
+                "abstract" : abstract,
                 "volume": volume,  # Only for journals
                 "citationCount": citation_count,
+                "influentialCitationCount": influential_citation_count,
                 "pages": pages  # Only for journals
             })
         else:
@@ -93,14 +100,23 @@ if response.status_code == 200:
                 "venueId": venue_id,
                 "venue": venue_name,
                 "venueType": venue_type,
+                "abstract" : abstract,
                 "citationCount": citation_count
             })  # No 'volume' or 'pages' for non-journals
 
+        ######################  VENUES ################################################
+        
+        # List of example cities
+        cities = [
+            "Hamburg", "Bilbao", "Barcelona", "New York", "Tokyo", "Barcelona", "Toronto", "Paris", "San Francisco",
+            "London", "Amsterdam", "Vienna", "Sydney", "Copenhagen", "Rome", "Seoul"
+        ]
+        
         # Store unique venue with year and volume (only for journals)
         venue_key = (venue_id, venue_name, year)  # Unique identifier without volume for non-journals
 
         if venue_key not in venues:
-            if venue_type == "journal":
+            if venue_type.lower() == "journal":
                 venues[venue_key] = {
                     "venueId": venue_id,
                     "venue": venue_name,
@@ -109,18 +125,20 @@ if response.status_code == 200:
                     "volume": volume  # Only for journals
                 }
             else:
+                random_city = random.choice(cities)  # Pick a random city
                 venues[venue_key] = {
                     "venueId": venue_id,
                     "venue": venue_name,
                     "year": year,
-                    "type": venue_type  # No 'volume' for non-journals
+                    "type": venue_type,
+                    "city": random_city  # Add city only for conferences
                 }
-
 
         # Store authors
         for author in paper.get("authors", []):
             author_id = author.get("authorId", "Unknown")
             author_name = author.get("name", "Unknown")
+            hIndex = author.get("hIndex", "Unknown")
             paper_Count = author.get("paperCount", "Unknown")
             affiliations = author.get("affiliations", [])
 
@@ -128,6 +146,7 @@ if response.status_code == 200:
                 authors[author_id] = {
                     "authorId": author_id,
                     "name": author_name,
+                    "hIndex": hIndex,
                     "paper_Count" : paper_Count,
                     "affiliations": affiliations
                 }
@@ -149,6 +168,16 @@ if response.status_code == 200:
     # Save processed papers to JSON
     with open("papers.json", "w") as f:
         json.dump(processed_papers, f, indent=4)
+
+    ############## MAKE CONFERENCES WITH "WORKSHOP" IN THE TITLE WORKSHOPS  #####################
+
+    # Normalize 'workshop' venue type for conferences that contain 'workshop' in their title
+    for key, venue in venues.items():
+        if (
+            venue["type"].lower() == "conference" and
+            "workshop" in venue["venue"].lower()
+        ):
+            venue["type"] = "Workshop"
 
     # Save unique venues to JSON
     with open("venues.json", "w") as f:
