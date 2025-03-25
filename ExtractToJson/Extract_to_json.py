@@ -1,6 +1,9 @@
 import requests
 import json
 import random
+import nltk
+from sklearn.feature_extraction.text import TfidfVectorizer
+from neo4j import GraphDatabase
 
 # API Request Parameters
 query = "Graph Database"

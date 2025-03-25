@@ -91,7 +91,7 @@ for filename, (label, unique_field) in csv_files.items():
 
 
 # Step 3: Create Relationships
-
+'''
 # (Author)-[:WROTE]->(Paper)
 with open(os.path.join(folder_path, "papers.csv"), "r", encoding="utf-8") as papers_file:
     papers_reader = csv.DictReader(papers_file)
@@ -116,6 +116,50 @@ with open(os.path.join(folder_path, "papers.csv"), "r", encoding="utf-8") as pap
                     run_query(query, params)
                     break  # Once we find the correct author, break the inner loop
 
+'''
+
+# (Author)-[:WROTE]->(Paper)
+with open(os.path.join(folder_path, "papers.csv"), "r", encoding="utf-8") as papers_file:
+    papers_reader = csv.DictReader(papers_file)
+    for paper_row in papers_reader:
+        paper_id = paper_row.get("paperId")
+        first_author_id = paper_row.get("firstAuthor")
+        other_authors_ids = paper_row.get("otherAuthors", "").split(",")  # Split by comma to handle multiple co-authors
+
+        # Ensure the firstAuthor exists and create the relationship for first author
+        with open(os.path.join(folder_path, "authors.csv"), "r", encoding="utf-8") as authors_file:
+            authors_reader = csv.DictReader(authors_file)
+            for author_row in authors_reader:
+                if author_row["authorId"] == first_author_id:
+                    query = """
+                    MATCH (a:Author {authorId: $authorId})
+                    MATCH (p:Paper {paperId: $paperId})
+                    MERGE (a)-[:WROTE]->(p)
+                    """
+                    params = {
+                        "authorId": author_row["authorId"],
+                        "paperId": paper_id
+                    }
+                    run_query(query, params)
+                    break  # Once we find the first author, break the loop
+
+        # Handle co-authors (other authors) and create relationships
+        for co_author_id in other_authors_ids:
+            with open(os.path.join(folder_path, "authors.csv"), "r", encoding="utf-8") as authors_file:
+                authors_reader = csv.DictReader(authors_file)
+                for author_row in authors_reader:
+                    if author_row["authorId"] == co_author_id:
+                        query = """
+                        MATCH (a:Author {authorId: $authorId})
+                        MATCH (p:Paper {paperId: $paperId})
+                        MERGE (a)-[:WROTE]->(p)
+                        """
+                        params = {
+                            "authorId": author_row["authorId"],
+                            "paperId": paper_id
+                        }
+                        run_query(query, params)
+                        break  # Once we find the co-author, break the loop
 
 # (Paper)-[:PUBLISHED_IN]->(Venue)
 with open(os.path.join(folder_path, "papers.csv"), "r", encoding="utf-8") as f:
