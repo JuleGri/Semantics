@@ -3,9 +3,11 @@ import csv
 import os
 
 # Define the folder containing JSON files
-json_folder_path = "./ExtractToJson"
-csv_folder_path = "./CSVfiles"
-
+json_folder_path = "./output/json"
+#csv_folder_path = "./output/csv"
+# Define your ignored output path
+csv_folder_path = os.path.join("output", "csv")
+os.makedirs(csv_folder_path, exist_ok=True)
 
 '''
 # Loop through all files in the folder

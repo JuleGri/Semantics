@@ -13,7 +13,13 @@
         "venue": "International Symposium on Software Testing and Analysis",
         "venueType": "conference",
         "abstract": "Graph Database Management Systems (GDBMSs) store data as graphs and allow the efficient querying of nodes and their relationships. Logic bugs are bugs that cause a GDBMS to return an incorrect result for a given query (e.g., by returning incorrect nodes or relationships). The impact of such bugs can be severe, as they often go unnoticed. The core insight of this paper is that Query Partitioning, a test oracle that has been proposed to test Relational Database Systems, is applicable to testing GDBMSs as well. The core idea of Query Partitioning is that, given a query, multiple queries are derived whose results can be combined to reconstruct the given query\u2019s result. Any discrepancy in the result indicates a logic bug. We have implemented this approach as a practical tool named GDBMeter and evaluated GDBMeter on three popular GDBMSs and found a total of 40 unique, previously unknown bugs. We consider 14 of them to be logic bugs, the others being error or crash bugs. Overall, 27 of the bugs have been fixed, and 35 confirmed. We compared our approach to the state-of-the-art approach to testing GDBMS, which relies on differential testing; we found that it results in a high number of false alarms, while Query Partitioning reported actual logic bugs without any false alarms. Furthermore, despite the previous efforts in testing Neo4j and JanusGraph, we found 18 additional bugs. The developers appreciate our work and plan to integrate GDBMeter into their testing process. We expect that this simple, yet effective approach and the practical tool will be used to test other GDBMSs.",
-        "citationCount": 23
+        "citationCount": 23,
+        "influentialCitationCount": 2,
+        "reviewers": [
+            "46501582",
+            "98831679",
+            "2108248686"
+        ]
     },
     {
         "paperId": "6c755fc901d0b41a5d73c265f64a5aacf62e83b8",
@@ -32,7 +38,13 @@
         "venue": "International Symposium on Software Testing and Analysis",
         "venueType": "conference",
         "abstract": "Graph database engines stand out in the era of big data for their efficiency of modeling and processing linked data. To assure high quality of graph database engines, it is highly critical to conduct automatic test generation for graph database engines, e.g., random test generation, the most commonly adopted approach in practice. However, random test generation faces the challenge of generating complex inputs (i.e., property graphs and queries) for producing non-empty query results; generating such type of inputs is important especially for detecting wrong-result bugs. To address this challenge, in this paper, we propose GDsmith, the first approach for testing Cypher graph database engines. GDsmith ensures that each randomly generated query satisfies the semantic requirements. To increase the probability of producing complex queries that return non-empty results, GDsmith includes two new techniques: graph-guided generation of complex pattern combinations and data-guided generation of complex conditions. Our evaluation results demonstrate that GDsmith is effective and efficient for producing complex queries that return non-empty results for bug detection, and substantially outperforms the baselines. GDsmith successfully detects 28 bugs on the released versions of three highly popular open-source graph database engines and receives positive feedback from their developers.",
-        "citationCount": 15
+        "citationCount": 15,
+        "influentialCitationCount": 3,
+        "reviewers": [
+            "2140474907",
+            "2115219530",
+            "2131285720"
+        ]
     },
     {
         "paperId": "61c931d50f3e32f70abf1bccddf2479212dd2fde",
@@ -57,7 +69,12 @@
         "volume": "5",
         "citationCount": 13,
         "influentialCitationCount": 3,
-        "pages": "560-610"
+        "pages": "560-610",
+        "reviewers": [
+            "150358651",
+            "2118120527",
+            "66913593"
+        ]
     },
     {
         "paperId": "2c3eef2f17369912e330281d54b535675077e4ca",
@@ -78,7 +95,12 @@
         "volume": "16",
         "citationCount": 16,
         "influentialCitationCount": 1,
-        "pages": "1790-1803"
+        "pages": "1790-1803",
+        "reviewers": [
+            "1706922",
+            "134898163",
+            "144007515"
+        ]
     },
     {
         "paperId": "e67a2817089312746d69b38ce9abfdc4b1bc69c3",
@@ -99,7 +121,13 @@
         "venue": "International Symposium on Software Testing and Analysis",
         "venueType": "conference",
         "abstract": "Graph database systems (GDBs) allow efficiently storing and retrieving graph data, and have become the critical component in many applications, e.g., knowledge graphs, social networks, and fraud detection. It is important to ensure that GDBs operate correctly. Logic bugs can occur and make GDBs return an incorrect result for a given query. These bugs are critical and can easily go unnoticed by developers when the graph and queries become complicated. Despite the importance of GDBs, logic bugs in GDBs have received less attention than those in relational database systems. In this paper, we present Grand, an approach for automatically finding logic bugs in GDBs that adopt Gremlin as their query language. The core idea of Grand is to construct semantically equivalent databases for multiple GDBs, and then compare the results of a Gremlin query on these databases. If the return results of a query on multiple GDBs are different, the likely cause is a logic bug in these GDBs. To effectively test GDBs, we propose a model-based query generation approach to generate valid Gremlin queries that can potentially return non-empty results, and a data mapping approach to unify the format of query results for different GDBs. We evaluate Grand on six widely-used GDBs, e.g., Neo4j and HugeGraph. In total, we have found 21 previously-unknown logic bugs in these GDBs. Among them, developers have confirmed 18 bugs, and fixed 7 bugs.",
-        "citationCount": 29
+        "citationCount": 29,
+        "influentialCitationCount": 3,
+        "reviewers": [
+            "2344391699",
+            "2184079980",
+            "19262604"
+        ]
     },
     {
         "paperId": "fe4c5074f021cd1c810892c1b6bc267b23aa6e5c",
@@ -116,7 +144,12 @@
         "volume": "26",
         "citationCount": 17,
         "influentialCitationCount": 0,
-        "pages": "515-537"
+        "pages": "515-537",
+        "reviewers": [
+            "2088215217",
+            "2131285720",
+            "143911374"
+        ]
     },
     {
         "paperId": "d1ae4ab5047489c2b010c7ce72262982ad66ad60",
@@ -157,7 +190,12 @@
         "volume": "15",
         "citationCount": 19,
         "influentialCitationCount": 2,
-        "pages": "3306-3318"
+        "pages": "3306-3318",
+        "reviewers": [
+            "2879007",
+            "2151811827",
+            "1706922"
+        ]
     },
     {
         "paperId": "75a8faa6861b7fdd49b36615df1835f1c4bbcb65",
@@ -179,7 +217,12 @@
         "volume": "15",
         "citationCount": 12,
         "influentialCitationCount": 0,
-        "pages": "2545-2558"
+        "pages": "2545-2558",
+        "reviewers": [
+            "152125305",
+            "153314895",
+            "2344391699"
+        ]
     },
     {
         "paperId": "5534c3b8bfe03ec0ee3ea3aafd0a4471b07f8b7d",
@@ -195,7 +238,13 @@
         "venue": "Symposium on Information and Communication Technology",
         "venueType": "conference",
         "abstract": "A graph database is a type of NoSQL database that uses graph structure for semantic queries with nodes, edges, and properties to represent and store data. It has been applied in many fields, such as education, health, business, and social network, with many famous applications such as Google, Facebook, and eBay. One of the main advantages of the graph database is its effective performance in data queries. This paper presents a comprehensive comparison of the performance based on the execution time of a NoSQL graph database named Neo4J with a popular relational database system, MySQL, which is used as the underlying technology in developing a software system. Query types are categorized into four groups: selection/ search, recursion, aggregation, and pattern matching. We examined representative questions for each group and executed them on Neo4j and MySQL using a real-life dataset named Career Village. The results show that Neo4j\u2019s data query performance is better than MySQL in most results.",
-        "citationCount": 8
+        "citationCount": 8,
+        "influentialCitationCount": 0,
+        "reviewers": [
+            "144007515",
+            "2112662828",
+            "2113918898"
+        ]
     },
     {
         "paperId": "7bb477077968d68aa7a6059d8d6d801fb28274da",
@@ -213,7 +262,12 @@
         "volume": "46",
         "citationCount": 21,
         "influentialCitationCount": 1,
-        "pages": "1 - 20"
+        "pages": "1 - 20",
+        "reviewers": [
+            "2695617",
+            "2115256817",
+            "2517099"
+        ]
     },
     {
         "paperId": "21042565ec941f4fa31ac5a0af85a1a84ff21f1b",
@@ -228,7 +282,12 @@
         "volume": "N/A",
         "citationCount": 23,
         "influentialCitationCount": 0,
-        "pages": "N/A"
+        "pages": "N/A",
+        "reviewers": [
+            "123816348",
+            "72117196",
+            "2093481779"
+        ]
     },
     {
         "paperId": "9b3e8d202488dc29e601fc471a25a2af9002659e",
@@ -249,7 +308,12 @@
         "volume": "N/A",
         "citationCount": 13,
         "influentialCitationCount": 0,
-        "pages": "N/A"
+        "pages": "N/A",
+        "reviewers": [
+            "2171106811",
+            "46255707",
+            "2051972259"
+        ]
     },
     {
         "paperId": "09f54c64b39f5f7e7570f9f4ce3e3af544401e14",
@@ -265,7 +329,35 @@
         "venue": "Annual Conference on Innovation and Technology in Computer Science Education",
         "venueType": "conference",
         "abstract": "As data grow both in size and in connectivity, the interest to use graph databases in the industry has been proliferating. However, there has been little research on graph database education. In response to the need to introduce college students to graph databases, this paper is the first to analyze students' errors in homework submissions of queries written in Cypher, the query language for Neo4j---the most prominent graph database. Based on 40,093 student submissions from homework assignments in an upper-level computer science database course at one university, this paper provides a quantitative analysis of students' learning when solving graph database problems. The data shows that students struggle the most to correctly use Cypher's WITH clause to define variable names before referencing in the WHERE clause and these errors persist over multiple homework problems requiring the same techniques, and we suggest a further improvement on the classification of syntactic errors.",
-        "citationCount": 8
+        "citationCount": 8,
+        "influentialCitationCount": 0,
+        "reviewers": [
+            "2117925465",
+            "2321412875",
+            "2964640"
+        ]
+    },
+    {
+        "paperId": "a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358",
+        "title": "An Empirical Study on Recent Graph Database Systems",
+        "year": 2020,
+        "firstAuthor": "2115256817",
+        "otherAuthors": [
+            "150358651",
+            "19262604",
+            "2873542"
+        ],
+        "venueId": "3e22d1e0-9b11-40a4-ac7c-0ebe5825316e",
+        "venue": "Knowledge Science, Engineering and Management",
+        "venueType": "conference",
+        "abstract": null,
+        "citationCount": 14,
+        "influentialCitationCount": 0,
+        "reviewers": [
+            "2517099",
+            "70209653",
+            "1625425838"
+        ]
     },
     {
         "paperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
@@ -283,23 +375,12 @@
         "volume": "N/A",
         "citationCount": 13,
         "influentialCitationCount": 0,
-        "pages": "N/A"
-    },
-    {
-        "paperId": "a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358",
-        "title": "An Empirical Study on Recent Graph Database Systems",
-        "year": 2020,
-        "firstAuthor": "2115256817",
-        "otherAuthors": [
-            "150358651",
-            "19262604",
-            "2873542"
-        ],
-        "venueId": "3e22d1e0-9b11-40a4-ac7c-0ebe5825316e",
-        "venue": "Knowledge Science, Engineering and Management",
-        "venueType": "conference",
-        "abstract": null,
-        "citationCount": 14
+        "pages": "N/A",
+        "reviewers": [
+            "70209653",
+            "144281339",
+            "2517099"
+        ]
     },
     {
         "paperId": "91d6e8ba5dd90b02fe3bd870b19da13a6167af53",
@@ -311,7 +392,13 @@
         "venue": "Alberto Mendelzon Workshop on Foundations of Data Management",
         "venueType": "conference",
         "abstract": null,
-        "citationCount": 153
+        "citationCount": 153,
+        "influentialCitationCount": 11,
+        "reviewers": [
+            "2879007",
+            "2153317609",
+            "2059572334"
+        ]
     },
     {
         "paperId": "33e332837e91c1048c3ed165cd16bf7607c3bf06",
@@ -327,6 +414,12 @@
         "venue": "International Conference on Computational Collective Intelligence",
         "venueType": "conference",
         "abstract": "The work is review in nature and focuses on basic concepts and example on Graph Database with a special focus on list of standard computerized tools available for handling the queries using graph database structure. The implementation benefits of each tool and a comparative analysis on various functionalities has been presented in this work. This work also elaborates on popular Graph Databases tool that includes Allegro Graph, ArangoDB, OrientDB, Infinite Graph ,Neo4j, Titan, FlockDB, Bitsy, StarDog, MongoDB and investigate their acceptance for solving day to day problems.",
-        "citationCount": 11
+        "citationCount": 11,
+        "influentialCitationCount": 1,
+        "reviewers": [
+            "1403082590",
+            "2321412875",
+            "66913593"
+        ]
     }
 ]

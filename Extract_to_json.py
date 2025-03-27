@@ -1,3 +1,4 @@
+import os
 import requests
 import json
 import random
@@ -101,15 +102,16 @@ if response.status_code == 200:
                 "venue": venue_name,
                 "venueType": venue_type,
                 "abstract" : abstract,
-                "citationCount": citation_count
+                "citationCount": citation_count,
+                "influentialCitationCount": influential_citation_count
             })  # No 'volume' or 'pages' for non-journals
 
         ######################  VENUES ################################################
         
         # List of example cities
         cities = [
-            "Hamburg", "Bilbao", "Barcelona", "New York", "Tokyo", "Barcelona", "Toronto", "Paris", "San Francisco",
-            "London", "Amsterdam", "Vienna", "Sydney", "Copenhagen", "Rome", "Seoul"
+            "Hamburg", "Bilbao", "Catania", "Barcelona", "New York", "Tokyo", "Barcelona", "Toronto", "Paris", "San Francisco",
+            "London", "Amsterdam", "Vienna", "Sydney", "Copenhagen", "Rome", "Seoul", "Montreal"
         ]
         
         # Store unique venue with year and volume (only for journals)
@@ -165,8 +167,42 @@ if response.status_code == 200:
                 "referencedPaperId": ref_paper.get("paperId", "Unknown")
             })
 
+    ###################### SELECT ELIGIBLE REVIEWERS FROM ALL AUTHORS   ##########################
+
+    all_author_ids = list(authors.keys())  # All authorIds from authors.json
+
+    for paper in processed_papers:
+        # Combine first and other authors
+        excluded_reviewers = set()
+
+        first_author = paper.get("firstAuthor")
+        if first_author:
+            excluded_reviewers.add(first_author)
+
+        other_authors = paper.get("otherAuthors", [])
+        excluded_reviewers.update(other_authors)
+
+        # Filter eligible reviewers
+        eligible_reviewers = [a for a in all_author_ids if a not in excluded_reviewers]
+
+        # Select 3 unique reviewers if possible
+        if len(eligible_reviewers) >= 3:
+            reviewers = random.sample(eligible_reviewers, 3)
+        else:
+            reviewers = []  # Or pad with 'N/A' or handle another way if you prefer
+
+        # Add reviewers to the paper
+        paper["reviewers"] = reviewers
+
+    ###########################################################################################
+
+    #json_folder_path = "./idea/output/json"
+    # Define your ignored output path
+    json_folder_path = os.path.join("output", "json")
+    os.makedirs(json_folder_path, exist_ok=True)
+
     # Save processed papers to JSON
-    with open("papers.json", "w") as f:
+    with open(os.path.join(json_folder_path, "papers.json"), "w") as f:
         json.dump(processed_papers, f, indent=4)
 
     ############## MAKE CONFERENCES WITH "WORKSHOP" IN THE TITLE WORKSHOPS  #####################
@@ -180,19 +216,16 @@ if response.status_code == 200:
             venue["type"] = "Workshop"
 
     # Save unique venues to JSON
-    with open("venues.json", "w") as f:
+    with open(os.path.join(json_folder_path, "venues.json"), "w") as f:
         json.dump(list(venues.values()), f, indent=4)
 
-    # Save authors to JSON
-    with open("authors.json", "w") as f:
+    with open(os.path.join(json_folder_path, "authors.json"), "w") as f:
         json.dump(list(authors.values()), f, indent=4)
 
-    # Save citations to JSON
-    with open("citations.json", "w") as f:
+    with open(os.path.join(json_folder_path, "citations.json"), "w") as f:
         json.dump(citations, f, indent=4)
 
-    # Save references to JSON
-    with open("references.json", "w") as f:
+    with open(os.path.join(json_folder_path, "references.json"), "w") as f:
         json.dump(references, f, indent=4)
 
     print(f"✅ Processed {len(processed_papers)} papers and saved {len(venues)} unique venues to venues.json.")

@@ -595,27 +595,6 @@
         "affiliations": []
     },
     {
-        "authorId": "2148303656",
-        "name": "M. Massri",
-        "hIndex": "Unknown",
-        "paper_Count": "Unknown",
-        "affiliations": []
-    },
-    {
-        "authorId": "66913593",
-        "name": "Parvedy Philippe Raipin",
-        "hIndex": "Unknown",
-        "paper_Count": "Unknown",
-        "affiliations": []
-    },
-    {
-        "authorId": "3010622",
-        "name": "Pierre Meye",
-        "hIndex": "Unknown",
-        "paper_Count": "Unknown",
-        "affiliations": []
-    },
-    {
         "authorId": "2115256817",
         "name": "Ran Wang",
         "hIndex": "Unknown",
@@ -639,6 +618,27 @@
     {
         "authorId": "2873542",
         "name": "Xuemin Lin",
+        "hIndex": "Unknown",
+        "paper_Count": "Unknown",
+        "affiliations": []
+    },
+    {
+        "authorId": "2148303656",
+        "name": "M. Massri",
+        "hIndex": "Unknown",
+        "paper_Count": "Unknown",
+        "affiliations": []
+    },
+    {
+        "authorId": "66913593",
+        "name": "Parvedy Philippe Raipin",
+        "hIndex": "Unknown",
+        "paper_Count": "Unknown",
+        "affiliations": []
+    },
+    {
+        "authorId": "3010622",
+        "name": "Pierre Meye",
         "hIndex": "Unknown",
         "paper_Count": "Unknown",
         "affiliations": []
