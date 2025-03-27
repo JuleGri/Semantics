@@ -868,58 +868,6 @@
         "citedPaperId": "4036f6c62964a567797c55e3781885a4d3e155ac"
     },
     {
-        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
-        "citedPaperId": "4a439b836f10dbde7d6a14f7c41b614905e02904"
-    },
-    {
-        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
-        "citedPaperId": "74875e33433d2b5d82450677f32727f37e1c65fb"
-    },
-    {
-        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
-        "citedPaperId": "a9c712f29da6e8bdd066e3018ec5fa6de8140422"
-    },
-    {
-        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
-        "citedPaperId": "b74d3379e53796a2dcf34b416da54cf0476eec73"
-    },
-    {
-        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
-        "citedPaperId": "3fbe1716a6097a05b07b2f7b070687c33818270a"
-    },
-    {
-        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
-        "citedPaperId": "0da8e19468f2a304a398d6d4943e637279a9e150"
-    },
-    {
-        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
-        "citedPaperId": "b23b1cb74c16763ec4c24c050b236b3be9878b36"
-    },
-    {
-        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
-        "citedPaperId": "e3de50039a9c6a8afe3b9b5c9409e18a9fd6fa6e"
-    },
-    {
-        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
-        "citedPaperId": "eb16407586444c0c089e6048d9a19bf8f90172ea"
-    },
-    {
-        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
-        "citedPaperId": "38a8c6cb4bfd188ddd6c88b38d821c86d04364a0"
-    },
-    {
-        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
-        "citedPaperId": "b6300a2bbc391d654a359a1c612805602d089892"
-    },
-    {
-        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
-        "citedPaperId": "c5f907ac79e12939b020a67b55fda56bcbb1f623"
-    },
-    {
-        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
-        "citedPaperId": "7bd7a3872ff27ee79c03b70fa1005c0eb7941ef9"
-    },
-    {
         "citingPaperId": "a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358",
         "citedPaperId": "c0a09405786bb29acc043a05a747f347edd94dfe"
     },
@@ -974,6 +922,58 @@
     {
         "citingPaperId": "a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358",
         "citedPaperId": "5c47e23ec4d2d8c6641ce7671b2054a5fff1911f"
+    },
+    {
+        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "citedPaperId": "4a439b836f10dbde7d6a14f7c41b614905e02904"
+    },
+    {
+        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "citedPaperId": "74875e33433d2b5d82450677f32727f37e1c65fb"
+    },
+    {
+        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "citedPaperId": "a9c712f29da6e8bdd066e3018ec5fa6de8140422"
+    },
+    {
+        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "citedPaperId": "b74d3379e53796a2dcf34b416da54cf0476eec73"
+    },
+    {
+        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "citedPaperId": "3fbe1716a6097a05b07b2f7b070687c33818270a"
+    },
+    {
+        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "citedPaperId": "0da8e19468f2a304a398d6d4943e637279a9e150"
+    },
+    {
+        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "citedPaperId": "b23b1cb74c16763ec4c24c050b236b3be9878b36"
+    },
+    {
+        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "citedPaperId": "e3de50039a9c6a8afe3b9b5c9409e18a9fd6fa6e"
+    },
+    {
+        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "citedPaperId": "eb16407586444c0c089e6048d9a19bf8f90172ea"
+    },
+    {
+        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "citedPaperId": "38a8c6cb4bfd188ddd6c88b38d821c86d04364a0"
+    },
+    {
+        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "citedPaperId": "b6300a2bbc391d654a359a1c612805602d089892"
+    },
+    {
+        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "citedPaperId": "c5f907ac79e12939b020a67b55fda56bcbb1f623"
+    },
+    {
+        "citingPaperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "citedPaperId": "7bd7a3872ff27ee79c03b70fa1005c0eb7941ef9"
     },
     {
         "citingPaperId": "91d6e8ba5dd90b02fe3bd870b19da13a6167af53",

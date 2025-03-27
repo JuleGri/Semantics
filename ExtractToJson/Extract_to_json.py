@@ -110,8 +110,8 @@ if response.status_code == 200:
         
         # List of example cities
         cities = [
-            "Hamburg", "Bilbao", "Barcelona", "New York", "Tokyo", "Barcelona", "Toronto", "Paris", "San Francisco",
-            "London", "Amsterdam", "Vienna", "Sydney", "Copenhagen", "Rome", "Seoul"
+            "Hamburg", "Bilbao", "Catania", "Barcelona", "New York", "Tokyo", "Barcelona", "Toronto", "Paris", "San Francisco",
+            "London", "Amsterdam", "Vienna", "Sydney", "Copenhagen", "Rome", "Seoul", "Montreal"
         ]
         
         # Store unique venue with year and volume (only for journals)
