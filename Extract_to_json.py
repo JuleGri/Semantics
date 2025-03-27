@@ -194,11 +194,8 @@ if response.status_code == 200:
         # Add reviewers to the paper
         paper["reviewers"] = reviewers
 
-    ###########################################################################################
 
-    #json_folder_path = "./idea/output/json"
-    # Define your ignored output path
-    json_folder_path = os.path.join("output", "json")
+    json_folder_path = "../JSONfiles"
     os.makedirs(json_folder_path, exist_ok=True)
 
     # Save processed papers to JSON
