@@ -196,7 +196,10 @@ if response.status_code == 200:
 
     ###########################################################################################
 
-    json_folder_path = "./ExtractToJson"
+    #json_folder_path = "./idea/output/json"
+    # Define your ignored output path
+    json_folder_path = os.path.join("output", "json")
+    os.makedirs(json_folder_path, exist_ok=True)
 
     # Save processed papers to JSON
     with open(os.path.join(json_folder_path, "papers.json"), "w") as f:
