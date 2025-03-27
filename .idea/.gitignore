@@ -3,5 +3,5 @@
 /workspace.xml
 
 # Ignore all output files
-output/*.csv
-output/*.json
+CSVfiles/
+JSONfiles/
