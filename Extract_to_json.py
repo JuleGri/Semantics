@@ -151,7 +151,7 @@ if response.status_code == 200:
                     "city": random_city  # Add city only for conferences
                 }
 
-        # Store authors
+        #################### Store authors
         for author in paper.get("authors", []):
             author_id = author.get("authorId", "Unknown")
             author_name = author.get("name", "Unknown")
@@ -168,7 +168,7 @@ if response.status_code == 200:
                     "affiliations": affiliations
                 }
 
-        # Store citations (papers citing this paper)
+        ################### Store citations (papers citing this paper)
         for cited_paper in paper.get("citations", []):
             citations.append({
                 "citingPaperId": paper_id,
