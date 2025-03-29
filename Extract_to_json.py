@@ -2,6 +2,11 @@ import os
 import requests
 import json
 import random
+import yake
+
+# Initialize YAKE keyword extractor
+kw_extractor = yake.KeywordExtractor(lan="en", n=2, dedupLim=0.9, top=5)  # Extract up to 5 key phrases
+
 
 # API Request Parameters
 query = "Graph Database"
@@ -26,6 +31,13 @@ if response.status_code == 200:
         title = paper.get("title", "N/A")
         year = paper.get("year", "Unknown")
         abstract = paper.get("abstract", "N/A")
+
+        # Keyword Extraction with Yake
+        if abstract and abstract != "N/A":
+            keywords = [kw for kw, score in kw_extractor.extract_keywords(abstract)]
+            print(keywords)
+        else:
+            keywords = []
         
         authors_list = paper.get("authors", [])  # Get authors list, or empty list if missing
         # Extract the first author's ID 
@@ -41,7 +53,7 @@ if response.status_code == 200:
         publication_types = paper.get("publicationTypes", [])
         venue_id = paper["publicationVenue"]["id"] if paper.get("publicationVenue") else "N/A"
         venue_name = paper["publicationVenue"]["name"] if paper.get("publicationVenue") else "N/A"
-        print(venue_name)
+
        
        #Process the venue type, that can be none, so it needs special treatment 
         venue_data = paper.get("publicationVenue")  # Might be None
@@ -51,13 +63,12 @@ if response.status_code == 200:
             venue_type = "N/A"  # Default if venue_data is None
         # If venue_type is still "N/A", skip it (optional)
         if venue_type == "N/A":
-            print("N/A")
         #print(f"Skipping paper {paper.get('paperId', 'Unknown')} due to missing venue type.")
             continue  # Skip this paper and move to the next one
-        print(venue_type)
 
 
-       # In some cases the processed paper is a journal, then well alsorun through these declarations
+
+       # In some cases the processed paper is a journal, then well also run through these declarations
         if venue_type == "journal":
             #volume = paper["journal"]["volume"] if paper.get("journal") else "N/A"
             #pages = paper["journal"]["pages"] if paper.get("journal") else "N/A"
@@ -86,6 +97,7 @@ if response.status_code == 200:
                 "venue": venue_name,
                 "venueType": venue_type,
                 "abstract" : abstract,
+                "keywords": keywords,
                 "volume": volume,  # Only for journals
                 "citationCount": citation_count,
                 "influentialCitationCount": influential_citation_count,
@@ -102,6 +114,7 @@ if response.status_code == 200:
                 "venue": venue_name,
                 "venueType": venue_type,
                 "abstract" : abstract,
+                "keywords": keywords,
                 "citationCount": citation_count,
                 "influentialCitationCount": influential_citation_count
             })  # No 'volume' or 'pages' for non-journals
@@ -195,7 +208,7 @@ if response.status_code == 200:
         paper["reviewers"] = reviewers
 
 
-    json_folder_path = "../JSONfiles"
+    json_folder_path = "JSONfiles"
     os.makedirs(json_folder_path, exist_ok=True)
 
     # Save processed papers to JSON

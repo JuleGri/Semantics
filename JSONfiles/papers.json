@@ -13,12 +13,19 @@
         "venue": "International Symposium on Software Testing and Analysis",
         "venueType": "conference",
         "abstract": "Graph Database Management Systems (GDBMSs) store data as graphs and allow the efficient querying of nodes and their relationships. Logic bugs are bugs that cause a GDBMS to return an incorrect result for a given query (e.g., by returning incorrect nodes or relationships). The impact of such bugs can be severe, as they often go unnoticed. The core insight of this paper is that Query Partitioning, a test oracle that has been proposed to test Relational Database Systems, is applicable to testing GDBMSs as well. The core idea of Query Partitioning is that, given a query, multiple queries are derived whose results can be combined to reconstruct the given query\u2019s result. Any discrepancy in the result indicates a logic bug. We have implemented this approach as a practical tool named GDBMeter and evaluated GDBMeter on three popular GDBMSs and found a total of 40 unique, previously unknown bugs. We consider 14 of them to be logic bugs, the others being error or crash bugs. Overall, 27 of the bugs have been fixed, and 35 confirmed. We compared our approach to the state-of-the-art approach to testing GDBMS, which relies on differential testing; we found that it results in a high number of false alarms, while Query Partitioning reported actual logic bugs without any false alarms. Furthermore, despite the previous efforts in testing Neo4j and JanusGraph, we found 18 additional bugs. The developers appreciate our work and plan to integrate GDBMeter into their testing process. We expect that this simple, yet effective approach and the practical tool will be used to test other GDBMSs.",
+        "keywords": [
+            "Management Systems",
+            "Database Management",
+            "Query Partitioning",
+            "Graph Database",
+            "Database Systems"
+        ],
         "citationCount": 23,
         "influentialCitationCount": 2,
         "reviewers": [
             "46501582",
-            "98831679",
-            "2108248686"
+            "2873542",
+            "143911374"
         ]
     },
     {
@@ -38,12 +45,19 @@
         "venue": "International Symposium on Software Testing and Analysis",
         "venueType": "conference",
         "abstract": "Graph database engines stand out in the era of big data for their efficiency of modeling and processing linked data. To assure high quality of graph database engines, it is highly critical to conduct automatic test generation for graph database engines, e.g., random test generation, the most commonly adopted approach in practice. However, random test generation faces the challenge of generating complex inputs (i.e., property graphs and queries) for producing non-empty query results; generating such type of inputs is important especially for detecting wrong-result bugs. To address this challenge, in this paper, we propose GDsmith, the first approach for testing Cypher graph database engines. GDsmith ensures that each randomly generated query satisfies the semantic requirements. To increase the probability of producing complex queries that return non-empty results, GDsmith includes two new techniques: graph-guided generation of complex pattern combinations and data-guided generation of complex conditions. Our evaluation results demonstrate that GDsmith is effective and efficient for producing complex queries that return non-empty results for bug detection, and substantially outperforms the baselines. GDsmith successfully detects 28 bugs on the released versions of three highly popular open-source graph database engines and receives positive feedback from their developers.",
+        "keywords": [
+            "database engines",
+            "Graph database",
+            "big data",
+            "linked data",
+            "database"
+        ],
         "citationCount": 15,
         "influentialCitationCount": 3,
         "reviewers": [
-            "2140474907",
-            "2115219530",
-            "2131285720"
+            "1754091",
+            "2142659443",
+            "2144671306"
         ]
     },
     {
@@ -66,14 +80,21 @@
         "venue": "Data Intelligence",
         "venueType": "journal",
         "abstract": "ABSTRACT In this systems paper, we present MillenniumDB: a novel graph database engine that is modular, persistent, and open source. MillenniumDB is based on a graph data model, which we call domain graphs, that provides a simple abstraction upon which a variety of popular graph models can be supported, thus providing a flexible data management engine for diverse types of knowledge graph. The engine itself is founded on a combination of tried and tested techniques from relational data management, state-of-the-art algorithms for worst-case-optimal joins, as well as graph-specific algorithms for evaluating path queries. In this paper, we present the main design principles underlying MillenniumDB, describing the abstract graph model and query semantics supported, the concrete data model and query syntax implemented, as well as the storage, indexing, query planning and query evaluation techniques used. We evaluate MillenniumDB over real-world data and queries from the Wikidata knowledge graph, where we find that it outperforms other popular persistent graph database engines (including both enterprise and open source alternatives) that support similar query features.",
+        "keywords": [
+            "graph",
+            "systems paper",
+            "data",
+            "query",
+            "graph database"
+        ],
         "volume": "5",
         "citationCount": 13,
         "influentialCitationCount": 3,
         "pages": "560-610",
         "reviewers": [
-            "150358651",
-            "2118120527",
-            "66913593"
+            "10313020",
+            "2145413970",
+            "2873542"
         ]
     },
     {
@@ -92,14 +113,21 @@
         "venue": "Proceedings of the VLDB Endowment",
         "venueType": "journal",
         "abstract": "\n Modern graph database query languages such as GQL, SQL/PGQ, and their academic predecessor G-Core promote paths to first-class citizens in the sense that their pattern matching facility can return\n paths\n , as opposed to only nodes and edges. This is challenging for database engines, since graphs can have a large number of paths between a given node pair, which can cause huge intermediate results in query evaluation.\n \n \n We introduce the concept of\n path multiset representations (PMRs)\n , which can represent multisets of paths exponentially succinctly and therefore bring significant advantages for representing intermediate results. We give a detailed theoretical analysis that shows that they are especially well-suited for representing results of regular path queries and extensions thereof involving counting, random sampling, and unions. Our experiments show that they drastically improve scalability for regular path query evaluation, with speedups of several orders of magnitude.\n",
+        "keywords": [
+            "academic predecessor",
+            "predecessor G-Core",
+            "G-Core promote",
+            "first-class citizens",
+            "pattern matching"
+        ],
         "volume": "16",
         "citationCount": 16,
         "influentialCitationCount": 1,
         "pages": "1790-1803",
         "reviewers": [
-            "1706922",
-            "134898163",
-            "144007515"
+            "2057038192",
+            "19262604",
+            "2695617"
         ]
     },
     {
@@ -121,12 +149,19 @@
         "venue": "International Symposium on Software Testing and Analysis",
         "venueType": "conference",
         "abstract": "Graph database systems (GDBs) allow efficiently storing and retrieving graph data, and have become the critical component in many applications, e.g., knowledge graphs, social networks, and fraud detection. It is important to ensure that GDBs operate correctly. Logic bugs can occur and make GDBs return an incorrect result for a given query. These bugs are critical and can easily go unnoticed by developers when the graph and queries become complicated. Despite the importance of GDBs, logic bugs in GDBs have received less attention than those in relational database systems. In this paper, we present Grand, an approach for automatically finding logic bugs in GDBs that adopt Gremlin as their query language. The core idea of Grand is to construct semantically equivalent databases for multiple GDBs, and then compare the results of a Gremlin query on these databases. If the return results of a query on multiple GDBs are different, the likely cause is a logic bug in these GDBs. To effectively test GDBs, we propose a model-based query generation approach to generate valid Gremlin queries that can potentially return non-empty results, and a data mapping approach to unify the format of query results for different GDBs. We evaluate Grand on six widely-used GDBs, e.g., Neo4j and HugeGraph. In total, we have found 21 previously-unknown logic bugs in these GDBs. Among them, developers have confirmed 18 bugs, and fixed 7 bugs.",
+        "keywords": [
+            "GDBs",
+            "Logic bugs",
+            "bugs",
+            "social networks",
+            "fraud detection"
+        ],
         "citationCount": 29,
         "influentialCitationCount": 3,
         "reviewers": [
-            "2344391699",
-            "2184079980",
-            "19262604"
+            "38319925",
+            "2118207557",
+            "98831679"
         ]
     },
     {
@@ -141,14 +176,15 @@
         "venue": "Cluster Computing",
         "venueType": "journal",
         "abstract": null,
+        "keywords": [],
         "volume": "26",
         "citationCount": 17,
         "influentialCitationCount": 0,
         "pages": "515-537",
         "reviewers": [
-            "2088215217",
-            "2131285720",
-            "143911374"
+            "2280834096",
+            "2153604994",
+            "2964640"
         ]
     },
     {
@@ -187,14 +223,21 @@
         "venue": "Proceedings of the VLDB Endowment",
         "venueType": "journal",
         "abstract": "Most products at ByteDance, e.g., TikTok, Douyin, and Toutiao, naturally generate massive amounts of graph data. To efficiently store, query and update massive graph data is challenging for the broad range of products at ByteDance with various performance requirements. We categorize graph workloads at ByteDance into three types: online analytical, transaction, and serving processing, where each workload has its own characteristics. Existing graph databases have different performance bottlenecks in handling these workloads and none can efficiently handle the scale of graphs at ByteDance. We developed ByteGraph to process these graph workloads with high throughput, low latency and high scalability. There are several key designs in ByteGraph that make it efficient for processing our workloads, including edge-trees to store adjacency lists for high parallelism and low memory usage, adaptive optimizations on thread pools and indexes, and geographic replications to achieve fault tolerance and availability. ByteGraph has been in production use for several years and its performance has shown to be robust for processing a wide range of graph workloads at ByteDance.",
+        "keywords": [
+            "naturally generate",
+            "graph data",
+            "Douyin",
+            "graph",
+            "graph workloads"
+        ],
         "volume": "15",
         "citationCount": 19,
         "influentialCitationCount": 2,
         "pages": "3306-3318",
         "reviewers": [
-            "2879007",
-            "2151811827",
-            "1706922"
+            "2115256817",
+            "144007515",
+            "2434366"
         ]
     },
     {
@@ -214,14 +257,15 @@
         "venue": "Proceedings of the VLDB Endowment",
         "venueType": "journal",
         "abstract": null,
+        "keywords": [],
         "volume": "15",
         "citationCount": 12,
         "influentialCitationCount": 0,
         "pages": "2545-2558",
         "reviewers": [
-            "152125305",
-            "153314895",
-            "2344391699"
+            "105003008",
+            "2321412875",
+            "2057038192"
         ]
     },
     {
@@ -238,12 +282,19 @@
         "venue": "Symposium on Information and Communication Technology",
         "venueType": "conference",
         "abstract": "A graph database is a type of NoSQL database that uses graph structure for semantic queries with nodes, edges, and properties to represent and store data. It has been applied in many fields, such as education, health, business, and social network, with many famous applications such as Google, Facebook, and eBay. One of the main advantages of the graph database is its effective performance in data queries. This paper presents a comprehensive comparison of the performance based on the execution time of a NoSQL graph database named Neo4J with a popular relational database system, MySQL, which is used as the underlying technology in developing a software system. Query types are categorized into four groups: selection/ search, recursion, aggregation, and pattern matching. We examined representative questions for each group and executed them on Neo4j and MySQL using a real-life dataset named Career Village. The results show that Neo4j\u2019s data query performance is better than MySQL in most results.",
+        "keywords": [
+            "graph database",
+            "database",
+            "semantic queries",
+            "graph structure",
+            "graph"
+        ],
         "citationCount": 8,
         "influentialCitationCount": 0,
         "reviewers": [
             "144007515",
-            "2112662828",
-            "2113918898"
+            "66913593",
+            "2093481779"
         ]
     },
     {
@@ -259,14 +310,15 @@
         "venue": "The Arabian journal for science and engineering",
         "venueType": "journal",
         "abstract": null,
+        "keywords": [],
         "volume": "46",
         "citationCount": 21,
         "influentialCitationCount": 1,
         "pages": "1 - 20",
         "reviewers": [
-            "2695617",
-            "2115256817",
-            "2517099"
+            "66913593",
+            "3010622",
+            "1490915504"
         ]
     },
     {
@@ -279,14 +331,21 @@
         "venue": "Electronics",
         "venueType": "journal",
         "abstract": "Ontologies, and especially formal ones, have traditionally been investigated as a means to formalize an application domain so as to carry out automated reasoning on it. The union of the terminological part of an ontology and the corresponding assertional part is known as a Knowledge Graph. On the other hand, database technology has often focused on the optimal organization of data so as to boost efficiency in their storage, management and retrieval. Graph databases are a recent technology specifically focusing on element-driven data browsing rather than on batch processing. While the complementarity and connections between these technologies are patent and intuitive, little exists to bring them to full integration and cooperation. This paper aims at bridging this gap, by proposing an intermediate format that can be easily mapped onto the formal ontology on one hand, so as to allow complex reasoning, and onto the graph database on the other, so as to benefit from efficient data handling.",
+        "keywords": [
+            "application domain",
+            "Knowledge Graph",
+            "automated reasoning",
+            "Graph",
+            "Ontologies"
+        ],
         "volume": "N/A",
         "citationCount": 23,
         "influentialCitationCount": 0,
         "pages": "N/A",
         "reviewers": [
-            "123816348",
             "72117196",
-            "2093481779"
+            "144658846",
+            "98831679"
         ]
     },
     {
@@ -305,14 +364,21 @@
         "venue": "Applied Sciences",
         "venueType": "journal",
         "abstract": "Effective data interoperability and schedule analysis play a significant role in improving the management of prefabricated buildings. However, there is a lack of efficient strategies and comprehensive approaches for data interoperability and data-based automated schedule analysis. This paper intends to promote prefabricated buildings\u2019 management by solving these two problems via developing an IFC-based framework consisting of three parts. Firstly, this framework proposed a mechanism to establish an IFC-based 4D construction management information model of prefabricated buildings. Furthermore, a non-relational database\u2014graph database\u2014is introduced to twin this model into a task-centered network to realize the interoperation of construction information among different participants. Finally, graph database-based strategies to update data, automatically analyze construction schedules and visualize the 4D construction management information model are described. The proposed framework is validated in a prefabricated engineering case. In this case, an IFC-based and graph database-based 4D construction management information model is established through IFC standard\u2019s extension. The graph database-based analysis of the model automatically recognizes the engineering case\u2019s critical path information, delay analysis information, and schedule network analysis information. It is illustrated that this framework can successfully establish a unified IFC-based information model of prefabricated buildings\u2019 construction management to prompt effective data interoperability. In addition, the application of this IFC-based information model in graph database can automatically analyze the construction schedules to prevent possible delays in advance. In short, the significance of this paper is to innovatively propose an IFC-based and graph data-based information model to solve the difficulties of ineffective data interoperation and unautomated schedule analysis in prefabricated buildings\u2019 construction management. This study can be the digital foundation of further IFC-based digital twin.",
+        "keywords": [
+            "information",
+            "information model",
+            "construction management",
+            "construction",
+            "model"
+        ],
         "volume": "N/A",
         "citationCount": 13,
         "influentialCitationCount": 0,
         "pages": "N/A",
         "reviewers": [
-            "2171106811",
-            "46255707",
-            "2051972259"
+            "2116124684",
+            "134898163",
+            "2118120527"
         ]
     },
     {
@@ -329,12 +395,49 @@
         "venue": "Annual Conference on Innovation and Technology in Computer Science Education",
         "venueType": "conference",
         "abstract": "As data grow both in size and in connectivity, the interest to use graph databases in the industry has been proliferating. However, there has been little research on graph database education. In response to the need to introduce college students to graph databases, this paper is the first to analyze students' errors in homework submissions of queries written in Cypher, the query language for Neo4j---the most prominent graph database. Based on 40,093 student submissions from homework assignments in an upper-level computer science database course at one university, this paper provides a quantitative analysis of students' learning when solving graph database problems. The data shows that students struggle the most to correctly use Cypher's WITH clause to define variable names before referencing in the WHERE clause and these errors persist over multiple homework problems requiring the same techniques, and we suggest a further improvement on the classification of syntactic errors.",
+        "keywords": [
+            "graph database",
+            "graph",
+            "database",
+            "data grow",
+            "database education"
+        ],
         "citationCount": 8,
         "influentialCitationCount": 0,
         "reviewers": [
-            "2117925465",
-            "2321412875",
-            "2964640"
+            "2152692124",
+            "123816348",
+            "2113918898"
+        ]
+    },
+    {
+        "paperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "title": "GDBAlive: A Temporal Graph Database Built on Top of a Columnar Data Store",
+        "year": 2020,
+        "firstAuthor": "2148303656",
+        "otherAuthors": [
+            "66913593",
+            "3010622"
+        ],
+        "venueId": "f4784c7b-6592-49eb-a116-7290e0398868",
+        "venue": "Journal of Advances in Information Technology",
+        "venueType": "journal",
+        "abstract": "Although graph databases have extensively found applications in the relationship-centered era, a time-version support is seldom provided. While current storage systems capture the most recently updated snapshot of the underlying graph, most real world graphs embed a dynamic behavior translating the fact that vertices or edges can join or leave the graph at any time instant. Regarding that, a graph database should faithfully maintain the state of every graph's element permitting the analysis and prediction of the underlying system's performance. Since physical deletions are forbidden in such a scenario, the outgrowing size of data is a crippling restriction steering the interest in this area towards the optimization of the persistent storage. However, capturing and storing the state of the graph as full snapshots adds a storage overhead traded by faster query responses. Accordingly, the choice of an appropriate storage engine should be adapted with the threshold of accepted query latencies and the available storage resources. This paper will recognize the anterior academic work in the era of temporal graph databases while highlighting the existing tradeoff between storage and computation time costs. The implementation of GDBAlive, a temporal graph database using two state-of-the-art techniques Copy+Log and Log, is provided relying on a robust column oriented data store. In order to optimize the responsiveness of temporal queries in terms of computation times, we will introduce two fetching strategies \"AsyncFS\" and \"Forced Fetch\" and prove their efficiency on a real dataset.",
+        "keywords": [
+            "extensively found",
+            "found applications",
+            "time-version support",
+            "graph",
+            "graph databases"
+        ],
+        "volume": "N/A",
+        "citationCount": 13,
+        "influentialCitationCount": 0,
+        "pages": "N/A",
+        "reviewers": [
+            "2158585032",
+            "134898163",
+            "150358651"
         ]
     },
     {
@@ -351,35 +454,13 @@
         "venue": "Knowledge Science, Engineering and Management",
         "venueType": "conference",
         "abstract": null,
+        "keywords": [],
         "citationCount": 14,
         "influentialCitationCount": 0,
         "reviewers": [
-            "2517099",
-            "70209653",
-            "1625425838"
-        ]
-    },
-    {
-        "paperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
-        "title": "GDBAlive: A Temporal Graph Database Built on Top of a Columnar Data Store",
-        "year": 2020,
-        "firstAuthor": "2148303656",
-        "otherAuthors": [
-            "66913593",
-            "3010622"
-        ],
-        "venueId": "f4784c7b-6592-49eb-a116-7290e0398868",
-        "venue": "Journal of Advances in Information Technology",
-        "venueType": "journal",
-        "abstract": "Although graph databases have extensively found applications in the relationship-centered era, a time-version support is seldom provided. While current storage systems capture the most recently updated snapshot of the underlying graph, most real world graphs embed a dynamic behavior translating the fact that vertices or edges can join or leave the graph at any time instant. Regarding that, a graph database should faithfully maintain the state of every graph's element permitting the analysis and prediction of the underlying system's performance. Since physical deletions are forbidden in such a scenario, the outgrowing size of data is a crippling restriction steering the interest in this area towards the optimization of the persistent storage. However, capturing and storing the state of the graph as full snapshots adds a storage overhead traded by faster query responses. Accordingly, the choice of an appropriate storage engine should be adapted with the threshold of accepted query latencies and the available storage resources. This paper will recognize the anterior academic work in the era of temporal graph databases while highlighting the existing tradeoff between storage and computation time costs. The implementation of GDBAlive, a temporal graph database using two state-of-the-art techniques Copy+Log and Log, is provided relying on a robust column oriented data store. In order to optimize the responsiveness of temporal queries in terms of computation times, we will introduce two fetching strategies \"AsyncFS\" and \"Forced Fetch\" and prove their efficiency on a real dataset.",
-        "volume": "N/A",
-        "citationCount": 13,
-        "influentialCitationCount": 0,
-        "pages": "N/A",
-        "reviewers": [
-            "70209653",
-            "144281339",
-            "2517099"
+            "32058742",
+            "2118120527",
+            "1725650"
         ]
     },
     {
@@ -392,12 +473,13 @@
         "venue": "Alberto Mendelzon Workshop on Foundations of Data Management",
         "venueType": "conference",
         "abstract": null,
+        "keywords": [],
         "citationCount": 153,
         "influentialCitationCount": 11,
         "reviewers": [
-            "2879007",
-            "2153317609",
-            "2059572334"
+            "2118120527",
+            "2093481779",
+            "152781515"
         ]
     },
     {
@@ -414,12 +496,19 @@
         "venue": "International Conference on Computational Collective Intelligence",
         "venueType": "conference",
         "abstract": "The work is review in nature and focuses on basic concepts and example on Graph Database with a special focus on list of standard computerized tools available for handling the queries using graph database structure. The implementation benefits of each tool and a comparative analysis on various functionalities has been presented in this work. This work also elaborates on popular Graph Databases tool that includes Allegro Graph, ArangoDB, OrientDB, Infinite Graph ,Neo4j, Titan, FlockDB, Bitsy, StarDog, MongoDB and investigate their acceptance for solving day to day problems.",
+        "keywords": [
+            "Graph Database",
+            "database structure",
+            "basic concepts",
+            "special focus",
+            "standard computerized"
+        ],
         "citationCount": 11,
         "influentialCitationCount": 1,
         "reviewers": [
-            "1403082590",
-            "2321412875",
-            "66913593"
+            "66913593",
+            "2158585032",
+            "2051972259"
         ]
     }
 ]

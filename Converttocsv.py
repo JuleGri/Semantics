@@ -3,8 +3,8 @@ import csv
 import os
 
 # Define the folder containing JSON files
-json_folder_path = "../JSONfiles"
-csv_folder_path = "../CSVfiles"
+json_folder_path = "JSONfiles"
+csv_folder_path = "CSVfiles"
 
 '''
 # Loop through all files in the folder
