@@ -23,10 +23,11 @@
         "citationCount": 23,
         "influentialCitationCount": 2,
         "reviewers": [
-            "46501582",
-            "2873542",
-            "143911374"
-        ]
+            "2192611227",
+            "1490915504",
+            "105003008"
+        ],
+        "accepted": true
     },
     {
         "paperId": "6c755fc901d0b41a5d73c265f64a5aacf62e83b8",
@@ -55,10 +56,12 @@
         "citationCount": 15,
         "influentialCitationCount": 3,
         "reviewers": [
-            "1754091",
-            "2142659443",
-            "2144671306"
-        ]
+            "32058742",
+            "70209653",
+            "123816348",
+            "2065718"
+        ],
+        "accepted": false
     },
     {
         "paperId": "61c931d50f3e32f70abf1bccddf2479212dd2fde",
@@ -92,10 +95,12 @@
         "influentialCitationCount": 3,
         "pages": "560-610",
         "reviewers": [
-            "10313020",
-            "2145413970",
-            "2873542"
-        ]
+            "2517099",
+            "2070468032",
+            "2879007",
+            "2424392"
+        ],
+        "accepted": false
     },
     {
         "paperId": "2c3eef2f17369912e330281d54b535675077e4ca",
@@ -125,10 +130,11 @@
         "influentialCitationCount": 1,
         "pages": "1790-1803",
         "reviewers": [
-            "2057038192",
-            "19262604",
-            "2695617"
-        ]
+            "2182246691",
+            "98831679",
+            "1725650"
+        ],
+        "accepted": false
     },
     {
         "paperId": "e67a2817089312746d69b38ce9abfdc4b1bc69c3",
@@ -160,9 +166,10 @@
         "influentialCitationCount": 3,
         "reviewers": [
             "38319925",
-            "2118207557",
-            "98831679"
-        ]
+            "105003008",
+            "144658846"
+        ],
+        "accepted": true
     },
     {
         "paperId": "fe4c5074f021cd1c810892c1b6bc267b23aa6e5c",
@@ -182,10 +189,11 @@
         "influentialCitationCount": 0,
         "pages": "515-537",
         "reviewers": [
-            "2280834096",
-            "2153604994",
-            "2964640"
-        ]
+            "2057038192",
+            "2150609388",
+            "2879007"
+        ],
+        "accepted": false
     },
     {
         "paperId": "d1ae4ab5047489c2b010c7ce72262982ad66ad60",
@@ -235,10 +243,11 @@
         "influentialCitationCount": 2,
         "pages": "3306-3318",
         "reviewers": [
-            "2115256817",
+            "2118207557",
             "144007515",
-            "2434366"
-        ]
+            "2057038192"
+        ],
+        "accepted": true
     },
     {
         "paperId": "75a8faa6861b7fdd49b36615df1835f1c4bbcb65",
@@ -263,10 +272,12 @@
         "influentialCitationCount": 0,
         "pages": "2545-2558",
         "reviewers": [
-            "105003008",
-            "2321412875",
-            "2057038192"
-        ]
+            "2434366",
+            "152125305",
+            "2109512262",
+            "2164445100"
+        ],
+        "accepted": false
     },
     {
         "paperId": "5534c3b8bfe03ec0ee3ea3aafd0a4471b07f8b7d",
@@ -292,10 +303,12 @@
         "citationCount": 8,
         "influentialCitationCount": 0,
         "reviewers": [
-            "144007515",
-            "66913593",
-            "2093481779"
-        ]
+            "1663632797",
+            "31131132",
+            "66327914",
+            "2164445100"
+        ],
+        "accepted": false
     },
     {
         "paperId": "7bb477077968d68aa7a6059d8d6d801fb28274da",
@@ -316,10 +329,13 @@
         "influentialCitationCount": 1,
         "pages": "1 - 20",
         "reviewers": [
-            "66913593",
-            "3010622",
-            "1490915504"
-        ]
+            "2153604994",
+            "2131285720",
+            "144525882",
+            "40231586",
+            "31131132"
+        ],
+        "accepted": true
     },
     {
         "paperId": "21042565ec941f4fa31ac5a0af85a1a84ff21f1b",
@@ -343,10 +359,12 @@
         "influentialCitationCount": 0,
         "pages": "N/A",
         "reviewers": [
+            "2153604994",
             "72117196",
-            "144658846",
-            "98831679"
-        ]
+            "10313020",
+            "144615268"
+        ],
+        "accepted": true
     },
     {
         "paperId": "9b3e8d202488dc29e601fc471a25a2af9002659e",
@@ -376,10 +394,12 @@
         "influentialCitationCount": 0,
         "pages": "N/A",
         "reviewers": [
-            "2116124684",
-            "134898163",
-            "2118120527"
-        ]
+            "2184079980",
+            "144352362",
+            "2434366",
+            "2148303656"
+        ],
+        "accepted": true
     },
     {
         "paperId": "09f54c64b39f5f7e7570f9f4ce3e3af544401e14",
@@ -405,10 +425,37 @@
         "citationCount": 8,
         "influentialCitationCount": 0,
         "reviewers": [
-            "2152692124",
-            "123816348",
-            "2113918898"
-        ]
+            "23214019",
+            "2434366",
+            "2192611227",
+            "152781515"
+        ],
+        "accepted": false
+    },
+    {
+        "paperId": "a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358",
+        "title": "An Empirical Study on Recent Graph Database Systems",
+        "year": 2020,
+        "firstAuthor": "2115256817",
+        "otherAuthors": [
+            "150358651",
+            "19262604",
+            "2873542"
+        ],
+        "venueId": "3e22d1e0-9b11-40a4-ac7c-0ebe5825316e",
+        "venue": "Knowledge Science, Engineering and Management",
+        "venueType": "conference",
+        "abstract": null,
+        "keywords": [],
+        "citationCount": 14,
+        "influentialCitationCount": 0,
+        "reviewers": [
+            "153314895",
+            "1725650",
+            "144007515",
+            "2517099"
+        ],
+        "accepted": false
     },
     {
         "paperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
@@ -435,33 +482,13 @@
         "influentialCitationCount": 0,
         "pages": "N/A",
         "reviewers": [
-            "2158585032",
-            "134898163",
-            "150358651"
-        ]
-    },
-    {
-        "paperId": "a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358",
-        "title": "An Empirical Study on Recent Graph Database Systems",
-        "year": 2020,
-        "firstAuthor": "2115256817",
-        "otherAuthors": [
-            "150358651",
-            "19262604",
-            "2873542"
+            "2142659443",
+            "23214019",
+            "2093481779",
+            "153314895",
+            "1709642"
         ],
-        "venueId": "3e22d1e0-9b11-40a4-ac7c-0ebe5825316e",
-        "venue": "Knowledge Science, Engineering and Management",
-        "venueType": "conference",
-        "abstract": null,
-        "keywords": [],
-        "citationCount": 14,
-        "influentialCitationCount": 0,
-        "reviewers": [
-            "32058742",
-            "2118120527",
-            "1725650"
-        ]
+        "accepted": true
     },
     {
         "paperId": "91d6e8ba5dd90b02fe3bd870b19da13a6167af53",
@@ -477,10 +504,11 @@
         "citationCount": 153,
         "influentialCitationCount": 11,
         "reviewers": [
-            "2118120527",
-            "2093481779",
-            "152781515"
-        ]
+            "1706922",
+            "2434366",
+            "2424392"
+        ],
+        "accepted": false
     },
     {
         "paperId": "33e332837e91c1048c3ed165cd16bf7607c3bf06",
@@ -506,9 +534,11 @@
         "citationCount": 11,
         "influentialCitationCount": 1,
         "reviewers": [
-            "66913593",
-            "2158585032",
-            "2051972259"
-        ]
+            "5779643",
+            "153314895",
+            "2280834096",
+            "144525882"
+        ],
+        "accepted": false
     }
 ]
