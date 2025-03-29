@@ -1,0 +1,16 @@
+# 1. 3 most cited papers per venue
+
+# 2. Per venue (in general, not one specific edition), find the author community with authors that have published in 4 different editions of that venue
+
+# 3. Find Impact Factor per Journal
+
+    Steps: 
+    1 Count all citings from 2023 for Papers published in 2022 and 2021 in the same Journal
+    2. Count all papers, published in that journal in 2022, 2021
+    3. divide the citings from 1. by the papers from 2. 
+
+# 4. Find hIndex per Author
+
+    Steps:
+    1. Count the Papers, published by one author (p)
+    2. Count the Papers by that author, with a citationcount >= p
