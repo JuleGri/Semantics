@@ -1,0 +1,65 @@
+authorId,decision,paperId,reviewText
+2192611227,yes,a2a514ed839dafdd0fb76d6c2615f25f35bf8087,The paper covers special focus but lacks depth in some areas.
+1490915504,yes,a2a514ed839dafdd0fb76d6c2615f25f35bf8087,This paper presents promising ideas about Graph Database.
+105003008,no,a2a514ed839dafdd0fb76d6c2615f25f35bf8087,"Interesting research, especially the section on Graph Database."
+32058742,no,6c755fc901d0b41a5d73c265f64a5aacf62e83b8,"Some parts of the paper on basic concepts are worth considering, but overall unclear."
+70209653,no,6c755fc901d0b41a5d73c265f64a5aacf62e83b8,Significant improvements are required for the section on database structure.
+123816348,no,6c755fc901d0b41a5d73c265f64a5aacf62e83b8,The paper covers standard computerized but lacks depth in some areas.
+2065718,no,6c755fc901d0b41a5d73c265f64a5aacf62e83b8,The paper introduces standard computerized but needs further clarification.
+2517099,yes,61c931d50f3e32f70abf1bccddf2479212dd2fde,Not convinced by the arguments around special focus. Needs major revisions.
+2070468032,no,61c931d50f3e32f70abf1bccddf2479212dd2fde,The paper covers basic concepts but lacks depth in some areas.
+2879007,no,61c931d50f3e32f70abf1bccddf2479212dd2fde,Paper is lacking in depth on standard computerized. Needs better analysis.
+2424392,no,61c931d50f3e32f70abf1bccddf2479212dd2fde,"Interesting research, especially the section on Graph Database."
+2182246691,no,2c3eef2f17369912e330281d54b535675077e4ca,Paper is lacking in depth on database structure. Needs better analysis.
+98831679,no,2c3eef2f17369912e330281d54b535675077e4ca,The paper covers database structure but lacks depth in some areas.
+1725650,no,2c3eef2f17369912e330281d54b535675077e4ca,Not convinced by the arguments around database structure. Needs major revisions.
+38319925,yes,e67a2817089312746d69b38ce9abfdc4b1bc69c3,The paper introduces standard computerized but needs further clarification.
+105003008,yes,e67a2817089312746d69b38ce9abfdc4b1bc69c3,This paper presents promising ideas about special focus.
+144658846,no,e67a2817089312746d69b38ce9abfdc4b1bc69c3,Significant improvements are required for the section on basic concepts.
+2057038192,no,fe4c5074f021cd1c810892c1b6bc267b23aa6e5c,"Interesting research, especially the section on standard computerized."
+2150609388,no,fe4c5074f021cd1c810892c1b6bc267b23aa6e5c,"Some parts of the paper on basic concepts are worth considering, but overall unclear."
+2879007,yes,fe4c5074f021cd1c810892c1b6bc267b23aa6e5c,"Interesting research, especially the section on basic concepts."
+2118207557,no,d1ae4ab5047489c2b010c7ce72262982ad66ad60,Paper is lacking in depth on special focus. Needs better analysis.
+144007515,yes,d1ae4ab5047489c2b010c7ce72262982ad66ad60,Great insights into database structure. Could be a game changer.
+2057038192,yes,d1ae4ab5047489c2b010c7ce72262982ad66ad60,This paper presents promising ideas about database structure.
+2434366,yes,75a8faa6861b7fdd49b36615df1835f1c4bbcb65,The paper introduces database structure but needs further clarification.
+152125305,no,75a8faa6861b7fdd49b36615df1835f1c4bbcb65,Not convinced by the arguments around database structure. Needs major revisions.
+2109512262,yes,75a8faa6861b7fdd49b36615df1835f1c4bbcb65,Great insights into basic concepts. Could be a game changer.
+2164445100,no,75a8faa6861b7fdd49b36615df1835f1c4bbcb65,"Interesting research, especially the section on standard computerized."
+1663632797,yes,5534c3b8bfe03ec0ee3ea3aafd0a4471b07f8b7d,Great insights into special focus. Could be a game changer.
+31131132,no,5534c3b8bfe03ec0ee3ea3aafd0a4471b07f8b7d,Paper is lacking in depth on standard computerized. Needs better analysis.
+66327914,yes,5534c3b8bfe03ec0ee3ea3aafd0a4471b07f8b7d,This paper presents promising ideas about special focus.
+2164445100,no,5534c3b8bfe03ec0ee3ea3aafd0a4471b07f8b7d,Not convinced by the arguments around database structure. Needs major revisions.
+2153604994,yes,7bb477077968d68aa7a6059d8d6d801fb28274da,Great insights into special focus. Could be a game changer.
+2131285720,yes,7bb477077968d68aa7a6059d8d6d801fb28274da,This paper presents promising ideas about standard computerized.
+144525882,no,7bb477077968d68aa7a6059d8d6d801fb28274da,Paper is lacking in depth on basic concepts. Needs better analysis.
+40231586,yes,7bb477077968d68aa7a6059d8d6d801fb28274da,"Interesting research, especially the section on database structure."
+31131132,no,7bb477077968d68aa7a6059d8d6d801fb28274da,"Interesting research, especially the section on Graph Database."
+2153604994,yes,21042565ec941f4fa31ac5a0af85a1a84ff21f1b,The paper introduces special focus but needs further clarification.
+72117196,yes,21042565ec941f4fa31ac5a0af85a1a84ff21f1b,The paper covers Graph Database but lacks depth in some areas.
+10313020,yes,21042565ec941f4fa31ac5a0af85a1a84ff21f1b,Not convinced by the arguments around database structure. Needs major revisions.
+144615268,no,21042565ec941f4fa31ac5a0af85a1a84ff21f1b,Significant improvements are required for the section on database structure.
+2184079980,no,9b3e8d202488dc29e601fc471a25a2af9002659e,"Some parts of the paper on standard computerized are worth considering, but overall unclear."
+144352362,yes,9b3e8d202488dc29e601fc471a25a2af9002659e,This paper presents promising ideas about Graph Database.
+2434366,yes,9b3e8d202488dc29e601fc471a25a2af9002659e,Great insights into special focus. Could be a game changer.
+2148303656,yes,9b3e8d202488dc29e601fc471a25a2af9002659e,Great insights into special focus. Could be a game changer.
+23214019,yes,09f54c64b39f5f7e7570f9f4ce3e3af544401e14,This paper presents promising ideas about database structure.
+2434366,no,09f54c64b39f5f7e7570f9f4ce3e3af544401e14,"Some parts of the paper on special focus are worth considering, but overall unclear."
+2192611227,no,09f54c64b39f5f7e7570f9f4ce3e3af544401e14,Paper is lacking in depth on special focus. Needs better analysis.
+152781515,yes,09f54c64b39f5f7e7570f9f4ce3e3af544401e14,The paper introduces special focus but needs further clarification.
+153314895,no,a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358,"Interesting research, especially the section on special focus."
+1725650,yes,a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358,This paper presents promising ideas about special focus.
+144007515,no,a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358,Paper is lacking in depth on standard computerized. Needs better analysis.
+2517099,yes,a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358,Great insights into standard computerized. Could be a game changer.
+2142659443,yes,0601e9e434b30320c316c76228b97c093fa98ad6,Not convinced by the arguments around special focus. Needs major revisions.
+23214019,yes,0601e9e434b30320c316c76228b97c093fa98ad6,This paper presents promising ideas about Graph Database.
+2093481779,yes,0601e9e434b30320c316c76228b97c093fa98ad6,Great insights into special focus. Could be a game changer.
+153314895,yes,0601e9e434b30320c316c76228b97c093fa98ad6,Not convinced by the arguments around special focus. Needs major revisions.
+1709642,yes,0601e9e434b30320c316c76228b97c093fa98ad6,Significant improvements are required for the section on Graph Database.
+1706922,no,91d6e8ba5dd90b02fe3bd870b19da13a6167af53,"Interesting research, especially the section on Graph Database."
+2434366,no,91d6e8ba5dd90b02fe3bd870b19da13a6167af53,Not convinced by the arguments around special focus. Needs major revisions.
+2424392,yes,91d6e8ba5dd90b02fe3bd870b19da13a6167af53,The paper covers standard computerized but lacks depth in some areas.
+5779643,no,33e332837e91c1048c3ed165cd16bf7607c3bf06,Paper is lacking in depth on special focus. Needs better analysis.
+153314895,no,33e332837e91c1048c3ed165cd16bf7607c3bf06,Paper is lacking in depth on database structure. Needs better analysis.
+2280834096,no,33e332837e91c1048c3ed165cd16bf7607c3bf06,"Some parts of the paper on Graph Database are worth considering, but overall unclear."
+144525882,no,33e332837e91c1048c3ed165cd16bf7607c3bf06,"Interesting research, especially the section on standard computerized."

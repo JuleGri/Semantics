@@ -1,6 +1,7 @@
 from neo4j import GraphDatabase
 import csv
 import os
+import uuid
 
 # Connect to Neo4j
 uri = "bolt://localhost:7687"
@@ -30,13 +31,14 @@ create_constraints_queries = [
     "CREATE CONSTRAINT IF NOT EXISTS FOR (a:Author) REQUIRE a.authorId IS UNIQUE;",
     "CREATE CONSTRAINT IF NOT EXISTS FOR (p:Paper) REQUIRE p.paperId IS UNIQUE;",
     "CREATE CONSTRAINT IF NOT EXISTS FOR (v:Venue) REQUIRE v.venueId IS UNIQUE;",
+    "CREATE CONSTRAINT IF NOT EXISTS FOR (r:Review) REQUIRE r.reviewId IS UNIQUE;"
 ]
 
 for query in create_constraints_queries:
     run_query(query)
 
 # Folder containing the CSV files
-folder_path = "./CSVfiles"
+folder_path = "CSVfiles"
 '''
 # Step 2: Import CSV files as Nodes
 def import_csv_to_neo4j(csv_path, label):
@@ -57,6 +59,10 @@ def import_csv_to_neo4j(csv_path, label, unique_field):
             if unique_field not in row:
                 print(f"Missing {unique_field} in row: {row}")
                 continue  # Skip rows with missing unique field
+
+            # Ensure "venue" is prioritized as a display field
+            row["name"] = row.get("venue", "Unknown Venue")  # Set "name" field to "venue"
+
             properties = ", ".join([f"{key}: ${key}" for key in row.keys()])
             query = f"MERGE (n:{label} {{ {unique_field}: ${unique_field} }}) SET n += {{ {properties} }}"
             run_query(query, row)
@@ -203,6 +209,37 @@ with open(os.path.join(folder_path, "references.csv"), "r", encoding="utf-8") as
             MERGE (p1)-[:REFERENCES]->(p2)
             """
             run_query(query, row)
+
+# (Review)-[:WROTE_REVIEW]->(Author) & (Review)-[:REVIEWS]->(Paper)
+with open(os.path.join(folder_path, "reviews.csv"), "r", encoding="utf-8") as f:
+    reader = csv.DictReader(f)
+    for row in reader:
+        review_id = str(uuid.uuid4())  # Generate unique review ID
+        row["reviewId"] = review_id  # Add to the row dictionary
+
+        # Create Review node
+        query = """
+        MERGE (r:Review {reviewId: $reviewId})
+        SET r += {reviewText: $reviewText, decision: $decision}
+        """
+        run_query(query, row)
+
+        # Connect Review to Author (who wrote it)
+        query = """
+        MATCH (a:Author {authorId: $authorId})
+        MATCH (r:Review {reviewId: $reviewId})
+        MERGE (a)-[:WROTE_REVIEW]->(r)
+        """
+        run_query(query, row)
+
+        # Connect Review to Paper (it reviews)
+        query = """
+        MATCH (r:Review {reviewId: $reviewId})
+        MATCH (p:Paper {paperId: $paperId})
+        MERGE (r)-[:REVIEWS]->(p)
+        """
+        run_query(query, row)
+
 
 
 print("🎉 All CSV data and relationships successfully imported into Neo4j!")
