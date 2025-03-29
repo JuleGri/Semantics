@@ -39,17 +39,7 @@ for query in create_constraints_queries:
 
 # Folder containing the CSV files
 folder_path = "CSVfiles"
-'''
-# Step 2: Import CSV files as Nodes
-def import_csv_to_neo4j(csv_path, label):
-    """Import CSV data as nodes into Neo4j"""
-    with open(csv_path, "r", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            properties = ", ".join([f"{key}: ${key}" for key in row.keys()])
-            query = f"MERGE (n:{label} {{ {properties} }})"
-            run_query(query, row)
-'''
+
 # Step 2: Import CSV files as Nodes
 def import_csv_to_neo4j(csv_path, label, unique_field):
     """Import CSV data as nodes into Neo4j"""
@@ -73,20 +63,7 @@ csv_files = {
     "papers.csv": ("Paper", "paperId"),
     "venues.csv": ("Venue", "venueId"),
 }
-'''
 
-# Process all CSV files in the folder
-for filename in os.listdir(folder_path):
-    if filename.endswith(".csv"):
-        csv_path = os.path.join(folder_path, filename)
-        label = filename.replace(".csv", "")  # Use filename as Neo4j label
-
-        print(f"📥 Importing {csv_path} as `{label}` nodes...")
-        import_csv_to_neo4j(csv_path, label)
-        print(f"✅ `{label}` nodes imported successfully!")
-
-print("🎉 All CSV data successfully imported into Neo4j!")
-'''
 #Import csv
 for filename, (label, unique_field) in csv_files.items():
     csv_path = os.path.join(folder_path, filename)
