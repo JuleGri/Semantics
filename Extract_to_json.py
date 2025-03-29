@@ -25,6 +25,8 @@ if response.status_code == 200:
     citations = []  # List to store citations
     references = []  # List to store references
     processed_papers = []  # Store processed paper data
+    reviews = []  # List to store reviews
+
 
     for paper in papers:
         paper_id = paper.get("paperId", "N/A")
@@ -183,8 +185,15 @@ if response.status_code == 200:
     ###################### SELECT ELIGIBLE REVIEWERS FROM ALL AUTHORS   ##########################
 
     all_author_ids = list(authors.keys())  # All authorIds from authors.json
+    accepted_papers_count = 0  # Keep track of the number of accepted papers
+    # Calculate the total number of papers
+    total_papers = len(processed_papers)
+    # Target acceptance rate (80%)
+    target_accepted_papers = int(total_papers * 0.8)
 
     for paper in processed_papers:
+
+        decisions = [review["decision"] for review in reviews if review["paperId"] == paper["paperId"]]
         # Combine first and other authors
         excluded_reviewers = set()
 
@@ -198,36 +207,140 @@ if response.status_code == 200:
         # Filter eligible reviewers
         eligible_reviewers = [a for a in all_author_ids if a not in excluded_reviewers]
 
-        # Select 3 unique reviewers if possible
-        if len(eligible_reviewers) >= 3:
-            reviewers = random.sample(eligible_reviewers, 3)
+        # Select a random number of reviewers (between 3 and 5)
+        num_reviewers = random.randint(3, 5)
+        if len(eligible_reviewers) >= num_reviewers:
+            reviewers = random.sample(eligible_reviewers, num_reviewers)
         else:
-            reviewers = []  # Or pad with 'N/A' or handle another way if you prefer
+            reviewers = []
 
         # Add reviewers to the paper
         paper["reviewers"] = reviewers
 
+        # Create reviews and decisions
 
+        # Helper function to generate a varied review based on keywords
+        def generate_review(keywords):
+            # Different review patterns
+            positive_reviews = [
+                f"This paper presents promising ideas about {random.choice(keywords)}.",
+                f"Great insights into {random.choice(keywords)}. Could be a game changer.",
+                f"Interesting research, especially the section on {random.choice(keywords)}."
+            ]
+
+            neutral_reviews = [
+                f"The paper covers {random.choice(keywords)} but lacks depth in some areas.",
+                f"The paper introduces {random.choice(keywords)} but needs further clarification.",
+                f"Some parts of the paper on {random.choice(keywords)} are worth considering, but overall unclear."
+            ]
+
+            critical_reviews = [
+                f"Not convinced by the arguments around {random.choice(keywords)}. Needs major revisions.",
+                f"Significant improvements are required for the section on {random.choice(keywords)}.",
+                f"Paper is lacking in depth on {random.choice(keywords)}. Needs better analysis."
+            ]
+
+            # Randomly choose a review type
+            review_type = random.choice(["positive", "neutral", "critical"])
+
+            if review_type == "positive":
+                return random.choice(positive_reviews)
+            elif review_type == "neutral":
+                return random.choice(neutral_reviews)
+            else:
+                return random.choice(critical_reviews)
+
+        # Create reviews and decisions
+        for reviewer_id in reviewers:
+            review_text = generate_review(keywords)  # Generate a varied review
+            # Decision based on review sentiment
+            if "Needs improvement" in review_text or "lacking" in review_text or "unclear" in review_text:
+                decision = "no"
+            elif "game changer" in review_text or "promising" in review_text:
+                decision = "yes"
+            else:
+                decision = random.choice(["yes", "no"])  # Random decision if neutral
+
+            reviews.append({
+                "paperId": paper["paperId"],
+                "authorId": reviewer_id,
+                "reviewText": review_text,
+                "decision": decision
+            })
+
+        # Paper acceptance logic: If 2 out of 3 reviewers say "yes", it's accepted
+        decisions = [review["decision"] for review in reviews if review["paperId"] == paper["paperId"]]
+        if len(reviewers) == 3:
+            accepted = decisions.count("yes") >= 2  # For 3 reviewers, at least 2 "yes" are required
+        elif len(reviewers) == 4:
+            accepted = decisions.count("yes") >= 3  # For 4 reviewers, at least 3 "yes" are required
+        elif len(reviewers) == 5:
+            accepted = decisions.count("yes") >= 3  # For 5 reviewers, at least 3 "yes" are required
+
+        # Increment the accepted paper count if accepted
+        if accepted:
+            accepted_papers_count += 1
+
+        # If we've reached the target acceptance rate, stop accepting papers beyond this point
+        if accepted_papers_count > target_accepted_papers:
+            accepted = False  # Force acceptance to "no" if we've reached the target acceptance count
+
+        # Update paper's accepted field
+        paper["accepted"] = accepted
+
+        # If the paper is accepted, increment the accepted_papers_count
+        if accepted:
+            accepted_papers_count += 1
+
+
+    # After processing, print some debug information:
+    print(f"Total papers processed: {total_papers}")
+    print(f"Target accepted papers (80%): {target_accepted_papers}")
+    print(f"Actual accepted papers: {accepted_papers_count}")
+
+    # To verify that acceptance rate is close to 80%
+    acceptance_rate = (accepted_papers_count / total_papers) * 100
+    print(f"Acceptance Rate: {acceptance_rate:.2f}%")
+
+
+    # Filter out only accepted papers
+    accepted_papers = [paper for paper in processed_papers if paper.get("accepted")]
+
+    # Now, remove the venues of papers that are not accepted
+    accepted_venue_ids = {paper["venueId"] for paper in accepted_papers}  # Set of venue IDs linked to accepted papers
+
+    # Remove venues linked to rejected papers
+    filtered_venues = {
+        key: venue for key, venue in venues.items() if venue["venueId"] in accepted_venue_ids
+    }
+
+    #Create the JSON folder PATH
     json_folder_path = "JSONfiles"
     os.makedirs(json_folder_path, exist_ok=True)
 
     # Save processed papers to JSON
     with open(os.path.join(json_folder_path, "papers.json"), "w") as f:
         json.dump(processed_papers, f, indent=4)
+    '''
+    # Save only accepted papers to JSON
+    with open(os.path.join(json_folder_path, "papers.json"), "w") as f:
+        json.dump(accepted_papers, f, indent=4)
+    '''
 
     ############## MAKE CONFERENCES WITH "WORKSHOP" IN THE TITLE WORKSHOPS  #####################
 
     # Normalize 'workshop' venue type for conferences that contain 'workshop' in their title
-    for key, venue in venues.items():
+    # only save venues for accepted papers
+    for key, venue in filtered_venues.items():
         if (
             venue["type"].lower() == "conference" and
             "workshop" in venue["venue"].lower()
         ):
             venue["type"] = "Workshop"
 
-    # Save unique venues to JSON
-    with open(os.path.join(json_folder_path, "venues.json"), "w") as f:
-        json.dump(list(venues.values()), f, indent=4)
+
+    with open(os.path.join(json_folder_path, "venues.json"), "w") as f: #only save venues for accepted papers
+        json.dump(list(filtered_venues.values()), f, indent=4)
 
     with open(os.path.join(json_folder_path, "authors.json"), "w") as f:
         json.dump(list(authors.values()), f, indent=4)
@@ -237,6 +350,9 @@ if response.status_code == 200:
 
     with open(os.path.join(json_folder_path, "references.json"), "w") as f:
         json.dump(references, f, indent=4)
+
+    with open(os.path.join(json_folder_path, "reviews.json"), "w") as f:
+        json.dump(reviews, f, indent=4)
 
     print(f"✅ Processed {len(processed_papers)} papers and saved {len(venues)} unique venues to venues.json.")
     print(f"✅ Saved {len(authors)} authors, {len(citations)} citations, and {len(references)} references.")
