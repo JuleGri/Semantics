@@ -13,7 +13,8 @@ Research Paper Graph Database
    2. Re-run Converttocsv.py to convert the resulting json files into csv.
    3. Run new_neo4_connection.py to convert run the Cypher queries needed to evolve the graph.
    
-4. Run querying.py to run the Cypher queries for part B.
+4. B. Querying: run B.py, to run the Cypher queries for part B.
+  
 7. Run recommender.py to run the Cypher queries for part C.
 8. Run graph_alg.py to run the Cypher queries for part D.
 9. 

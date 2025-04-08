@@ -1,368 +1,356 @@
 [
     {
         "paperId": "a2a514ed839dafdd0fb76d6c2615f25f35bf8087",
-        "authorId": "2057038192",
-        "reviewText": "Interesting research, especially the section on Management Systems.",
+        "authorId": "19262604",
+        "reviewText": "The paper introduces Query Partitioning but needs further clarification.",
         "decision": "no"
     },
     {
         "paperId": "a2a514ed839dafdd0fb76d6c2615f25f35bf8087",
-        "authorId": "134898163",
-        "reviewText": "This paper presents promising ideas about Database Systems.",
+        "authorId": "2145413970",
+        "reviewText": "The paper covers Database Management but lacks depth in some areas.",
         "decision": "yes"
     },
     {
         "paperId": "a2a514ed839dafdd0fb76d6c2615f25f35bf8087",
-        "authorId": "2873542",
+        "authorId": "49661434",
         "reviewText": "Great insights into Database Systems. Could be a game changer.",
         "decision": "yes"
     },
     {
-        "paperId": "a2a514ed839dafdd0fb76d6c2615f25f35bf8087",
-        "authorId": "2157513188",
-        "reviewText": "The paper introduces Query Partitioning but needs further clarification.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "a2a514ed839dafdd0fb76d6c2615f25f35bf8087",
-        "authorId": "2108248686",
-        "reviewText": "Paper is lacking in depth on Query Partitioning. Needs better analysis.",
+        "paperId": "6c755fc901d0b41a5d73c265f64a5aacf62e83b8",
+        "authorId": "2093481779",
+        "reviewText": "Significant improvements are required for the section on database.",
         "decision": "no"
     },
     {
         "paperId": "6c755fc901d0b41a5d73c265f64a5aacf62e83b8",
-        "authorId": "30188257",
-        "reviewText": "Not convinced by the arguments around database engines. Needs major revisions.",
+        "authorId": "2182246691",
+        "reviewText": "The paper introduces Graph database but needs further clarification.",
         "decision": "no"
+    },
+    {
+        "paperId": "6c755fc901d0b41a5d73c265f64a5aacf62e83b8",
+        "authorId": "2059572334",
+        "reviewText": "This paper presents promising ideas about database engines.",
+        "decision": "yes"
     },
     {
         "paperId": "6c755fc901d0b41a5d73c265f64a5aacf62e83b8",
         "authorId": "144007515",
-        "reviewText": "The paper covers Graph database but lacks depth in some areas.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "6c755fc901d0b41a5d73c265f64a5aacf62e83b8",
-        "authorId": "152125305",
-        "reviewText": "Not convinced by the arguments around database engines. Needs major revisions.",
+        "reviewText": "Paper is lacking in depth on big data. Needs better analysis.",
         "decision": "no"
     },
     {
-        "paperId": "6c755fc901d0b41a5d73c265f64a5aacf62e83b8",
-        "authorId": "38319925",
-        "reviewText": "The paper introduces database engines but needs further clarification.",
+        "paperId": "61c931d50f3e32f70abf1bccddf2479212dd2fde",
+        "authorId": "2093481779",
+        "reviewText": "Not convinced by the arguments around data. Needs major revisions.",
+        "decision": "no"
+    },
+    {
+        "paperId": "61c931d50f3e32f70abf1bccddf2479212dd2fde",
+        "authorId": "134898163",
+        "reviewText": "This paper presents promising ideas about graph.",
         "decision": "yes"
     },
     {
         "paperId": "61c931d50f3e32f70abf1bccddf2479212dd2fde",
-        "authorId": "5779643",
-        "reviewText": "Great insights into graph. Could be a game changer.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "61c931d50f3e32f70abf1bccddf2479212dd2fde",
-        "authorId": "2280834096",
-        "reviewText": "Not convinced by the arguments around query. Needs major revisions.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "61c931d50f3e32f70abf1bccddf2479212dd2fde",
-        "authorId": "30188257",
-        "reviewText": "Significant improvements are required for the section on systems paper.",
-        "decision": "no"
-    },
-    {
-        "paperId": "2c3eef2f17369912e330281d54b535675077e4ca",
-        "authorId": "2151811827",
-        "reviewText": "Significant improvements are required for the section on pattern matching.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "2c3eef2f17369912e330281d54b535675077e4ca",
-        "authorId": "2148303656",
-        "reviewText": "Not convinced by the arguments around first-class citizens. Needs major revisions.",
-        "decision": "no"
-    },
-    {
-        "paperId": "2c3eef2f17369912e330281d54b535675077e4ca",
-        "authorId": "38319925",
-        "reviewText": "The paper introduces G-Core promote but needs further clarification.",
-        "decision": "no"
-    },
-    {
-        "paperId": "2c3eef2f17369912e330281d54b535675077e4ca",
-        "authorId": "2112409349",
-        "reviewText": "The paper covers first-class citizens but lacks depth in some areas.",
-        "decision": "no"
-    },
-    {
-        "paperId": "e67a2817089312746d69b38ce9abfdc4b1bc69c3",
-        "authorId": "2192611227",
-        "reviewText": "Some parts of the paper on bugs are worth considering, but overall unclear.",
-        "decision": "no"
-    },
-    {
-        "paperId": "e67a2817089312746d69b38ce9abfdc4b1bc69c3",
-        "authorId": "2151811827",
-        "reviewText": "Great insights into GDBs. Could be a game changer.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "e67a2817089312746d69b38ce9abfdc4b1bc69c3",
-        "authorId": "152781515",
-        "reviewText": "Not convinced by the arguments around social networks. Needs major revisions.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "e67a2817089312746d69b38ce9abfdc4b1bc69c3",
-        "authorId": "46255707",
-        "reviewText": "The paper introduces fraud detection but needs further clarification.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "fe4c5074f021cd1c810892c1b6bc267b23aa6e5c",
-        "authorId": "2304958793",
-        "reviewText": "Paper is lacking in depth on general research topic. Needs better analysis.",
-        "decision": "no"
-    },
-    {
-        "paperId": "fe4c5074f021cd1c810892c1b6bc267b23aa6e5c",
-        "authorId": "2873542",
-        "reviewText": "Paper is lacking in depth on general research topic. Needs better analysis.",
-        "decision": "no"
-    },
-    {
-        "paperId": "fe4c5074f021cd1c810892c1b6bc267b23aa6e5c",
-        "authorId": "2131285720",
-        "reviewText": "The paper covers general research topic but lacks depth in some areas.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "d1ae4ab5047489c2b010c7ce72262982ad66ad60",
-        "authorId": "2118207557",
-        "reviewText": "The paper introduces graph workloads but needs further clarification.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "d1ae4ab5047489c2b010c7ce72262982ad66ad60",
-        "authorId": "2059572334",
-        "reviewText": "Significant improvements are required for the section on naturally generate.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "d1ae4ab5047489c2b010c7ce72262982ad66ad60",
-        "authorId": "2171106811",
-        "reviewText": "Interesting research, especially the section on Douyin.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "75a8faa6861b7fdd49b36615df1835f1c4bbcb65",
-        "authorId": "2118207557",
-        "reviewText": "Significant improvements are required for the section on general research topic.",
-        "decision": "no"
-    },
-    {
-        "paperId": "75a8faa6861b7fdd49b36615df1835f1c4bbcb65",
-        "authorId": "1725650",
-        "reviewText": "Paper is lacking in depth on general research topic. Needs better analysis.",
-        "decision": "no"
-    },
-    {
-        "paperId": "75a8faa6861b7fdd49b36615df1835f1c4bbcb65",
         "authorId": "144525882",
+        "reviewText": "This paper presents promising ideas about systems paper.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "2c3eef2f17369912e330281d54b535675077e4ca",
+        "authorId": "50841357",
+        "reviewText": "Significant improvements are required for the section on first-class citizens.",
+        "decision": "no"
+    },
+    {
+        "paperId": "2c3eef2f17369912e330281d54b535675077e4ca",
+        "authorId": "2772109",
+        "reviewText": "The paper covers first-class citizens but lacks depth in some areas.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "2c3eef2f17369912e330281d54b535675077e4ca",
+        "authorId": "1403082590",
+        "reviewText": "Not convinced by the arguments around predecessor G-Core. Needs major revisions.",
+        "decision": "no"
+    },
+    {
+        "paperId": "e67a2817089312746d69b38ce9abfdc4b1bc69c3",
+        "authorId": "2879007",
+        "reviewText": "This paper presents promising ideas about Logic bugs.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "e67a2817089312746d69b38ce9abfdc4b1bc69c3",
+        "authorId": "19262604",
+        "reviewText": "Not convinced by the arguments around bugs. Needs major revisions.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "e67a2817089312746d69b38ce9abfdc4b1bc69c3",
+        "authorId": "113398129",
+        "reviewText": "Great insights into bugs. Could be a game changer.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "fe4c5074f021cd1c810892c1b6bc267b23aa6e5c",
+        "authorId": "2118120527",
         "reviewText": "Significant improvements are required for the section on general research topic.",
         "decision": "no"
     },
     {
-        "paperId": "5534c3b8bfe03ec0ee3ea3aafd0a4471b07f8b7d",
-        "authorId": "2142659443",
-        "reviewText": "Paper is lacking in depth on graph. Needs better analysis.",
-        "decision": "no"
-    },
-    {
-        "paperId": "5534c3b8bfe03ec0ee3ea3aafd0a4471b07f8b7d",
-        "authorId": "2088215217",
-        "reviewText": "The paper introduces graph database but needs further clarification.",
-        "decision": "no"
-    },
-    {
-        "paperId": "5534c3b8bfe03ec0ee3ea3aafd0a4471b07f8b7d",
-        "authorId": "30188257",
-        "reviewText": "Paper is lacking in depth on graph. Needs better analysis.",
-        "decision": "no"
-    },
-    {
-        "paperId": "7bb477077968d68aa7a6059d8d6d801fb28274da",
-        "authorId": "2116124684",
-        "reviewText": "Some parts of the paper on general research topic are worth considering, but overall unclear.",
-        "decision": "no"
-    },
-    {
-        "paperId": "7bb477077968d68aa7a6059d8d6d801fb28274da",
-        "authorId": "2964640",
-        "reviewText": "Some parts of the paper on general research topic are worth considering, but overall unclear.",
-        "decision": "no"
-    },
-    {
-        "paperId": "7bb477077968d68aa7a6059d8d6d801fb28274da",
-        "authorId": "2088215217",
-        "reviewText": "Great insights into general research topic. Could be a game changer.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "21042565ec941f4fa31ac5a0af85a1a84ff21f1b",
-        "authorId": "66913593",
-        "reviewText": "The paper introduces Knowledge Graph but needs further clarification.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "21042565ec941f4fa31ac5a0af85a1a84ff21f1b",
-        "authorId": "2116124684",
-        "reviewText": "Paper is lacking in depth on application domain. Needs better analysis.",
-        "decision": "no"
-    },
-    {
-        "paperId": "21042565ec941f4fa31ac5a0af85a1a84ff21f1b",
+        "paperId": "fe4c5074f021cd1c810892c1b6bc267b23aa6e5c",
         "authorId": "150358651",
-        "reviewText": "This paper presents promising ideas about Graph.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "9b3e8d202488dc29e601fc471a25a2af9002659e",
-        "authorId": "2088215217",
-        "reviewText": "Not convinced by the arguments around construction. Needs major revisions.",
-        "decision": "no"
-    },
-    {
-        "paperId": "9b3e8d202488dc29e601fc471a25a2af9002659e",
-        "authorId": "1709642",
-        "reviewText": "This paper presents promising ideas about information.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "9b3e8d202488dc29e601fc471a25a2af9002659e",
-        "authorId": "2148303656",
-        "reviewText": "The paper covers model but lacks depth in some areas.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "9b3e8d202488dc29e601fc471a25a2af9002659e",
-        "authorId": "2144671306",
-        "reviewText": "Some parts of the paper on information model are worth considering, but overall unclear.",
-        "decision": "no"
-    },
-    {
-        "paperId": "09f54c64b39f5f7e7570f9f4ce3e3af544401e14",
-        "authorId": "2109512262",
-        "reviewText": "Not convinced by the arguments around database education. Needs major revisions.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "09f54c64b39f5f7e7570f9f4ce3e3af544401e14",
-        "authorId": "1490915504",
-        "reviewText": "The paper introduces data grow but needs further clarification.",
-        "decision": "no"
-    },
-    {
-        "paperId": "09f54c64b39f5f7e7570f9f4ce3e3af544401e14",
-        "authorId": "144615268",
-        "reviewText": "Interesting research, especially the section on database education.",
-        "decision": "no"
-    },
-    {
-        "paperId": "09f54c64b39f5f7e7570f9f4ce3e3af544401e14",
-        "authorId": "2153604994",
-        "reviewText": "The paper covers graph database but lacks depth in some areas.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358",
-        "authorId": "144615268",
-        "reviewText": "Great insights into general research topic. Could be a game changer.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358",
-        "authorId": "2517099",
         "reviewText": "This paper presents promising ideas about general research topic.",
         "decision": "yes"
     },
     {
-        "paperId": "a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358",
-        "authorId": "2140474907",
-        "reviewText": "The paper covers general research topic but lacks depth in some areas.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358",
-        "authorId": "143911374",
-        "reviewText": "Paper is lacking in depth on general research topic. Needs better analysis.",
-        "decision": "no"
-    },
-    {
-        "paperId": "a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358",
-        "authorId": "2145763285",
-        "reviewText": "Significant improvements are required for the section on general research topic.",
-        "decision": "no"
-    },
-    {
-        "paperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
-        "authorId": "2517099",
-        "reviewText": "The paper covers extensively found but lacks depth in some areas.",
-        "decision": "no"
-    },
-    {
-        "paperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
-        "authorId": "2108844303",
-        "reviewText": "The paper covers extensively found but lacks depth in some areas.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
-        "authorId": "2184079980",
-        "reviewText": "Paper is lacking in depth on extensively found. Needs better analysis.",
-        "decision": "no"
-    },
-    {
-        "paperId": "91d6e8ba5dd90b02fe3bd870b19da13a6167af53",
-        "authorId": "2113918898",
-        "reviewText": "The paper covers general research topic but lacks depth in some areas.",
-        "decision": "no"
-    },
-    {
-        "paperId": "91d6e8ba5dd90b02fe3bd870b19da13a6167af53",
-        "authorId": "2117925465",
-        "reviewText": "Paper is lacking in depth on general research topic. Needs better analysis.",
-        "decision": "no"
-    },
-    {
-        "paperId": "91d6e8ba5dd90b02fe3bd870b19da13a6167af53",
-        "authorId": "144281339",
+        "paperId": "fe4c5074f021cd1c810892c1b6bc267b23aa6e5c",
+        "authorId": "2059572334",
         "reviewText": "The paper introduces general research topic but needs further clarification.",
         "decision": "yes"
     },
     {
-        "paperId": "33e332837e91c1048c3ed165cd16bf7607c3bf06",
-        "authorId": "2158585032",
-        "reviewText": "This paper presents promising ideas about basic concepts.",
-        "decision": "yes"
-    },
-    {
-        "paperId": "33e332837e91c1048c3ed165cd16bf7607c3bf06",
-        "authorId": "144352362",
-        "reviewText": "Paper is lacking in depth on standard computerized. Needs better analysis.",
+        "paperId": "d1ae4ab5047489c2b010c7ce72262982ad66ad60",
+        "authorId": "1709642",
+        "reviewText": "The paper covers graph workloads but lacks depth in some areas.",
         "decision": "no"
     },
     {
-        "paperId": "33e332837e91c1048c3ed165cd16bf7607c3bf06",
-        "authorId": "143911374",
-        "reviewText": "Not convinced by the arguments around standard computerized. Needs major revisions.",
+        "paperId": "d1ae4ab5047489c2b010c7ce72262982ad66ad60",
+        "authorId": "66327914",
+        "reviewText": "Not convinced by the arguments around Douyin. Needs major revisions.",
         "decision": "yes"
     },
     {
-        "paperId": "33e332837e91c1048c3ed165cd16bf7607c3bf06",
-        "authorId": "2153604994",
-        "reviewText": "Not convinced by the arguments around standard computerized. Needs major revisions.",
+        "paperId": "d1ae4ab5047489c2b010c7ce72262982ad66ad60",
+        "authorId": "2158585032",
+        "reviewText": "Some parts of the paper on naturally generate are worth considering, but overall unclear.",
+        "decision": "no"
+    },
+    {
+        "paperId": "d1ae4ab5047489c2b010c7ce72262982ad66ad60",
+        "authorId": "23214019",
+        "reviewText": "This paper presents promising ideas about Douyin.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "75a8faa6861b7fdd49b36615df1835f1c4bbcb65",
+        "authorId": "2321412875",
+        "reviewText": "Not convinced by the arguments around general research topic. Needs major revisions.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "75a8faa6861b7fdd49b36615df1835f1c4bbcb65",
+        "authorId": "2158585032",
+        "reviewText": "Paper is lacking in depth on general research topic. Needs better analysis.",
+        "decision": "no"
+    },
+    {
+        "paperId": "75a8faa6861b7fdd49b36615df1835f1c4bbcb65",
+        "authorId": "2088215217",
+        "reviewText": "Not convinced by the arguments around general research topic. Needs major revisions.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "5534c3b8bfe03ec0ee3ea3aafd0a4471b07f8b7d",
+        "authorId": "144525882",
+        "reviewText": "Great insights into semantic queries. Could be a game changer.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "5534c3b8bfe03ec0ee3ea3aafd0a4471b07f8b7d",
+        "authorId": "2108844303",
+        "reviewText": "Paper is lacking in depth on graph. Needs better analysis.",
+        "decision": "no"
+    },
+    {
+        "paperId": "5534c3b8bfe03ec0ee3ea3aafd0a4471b07f8b7d",
+        "authorId": "101108644",
+        "reviewText": "This paper presents promising ideas about graph.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "5534c3b8bfe03ec0ee3ea3aafd0a4471b07f8b7d",
+        "authorId": "2112409349",
+        "reviewText": "Some parts of the paper on graph structure are worth considering, but overall unclear.",
+        "decision": "no"
+    },
+    {
+        "paperId": "1cff064f815111a71a98afda7aee1867ad617901",
+        "authorId": "2150609388",
+        "reviewText": "Great insights into Contact tracing. Could be a game changer.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "1cff064f815111a71a98afda7aee1867ad617901",
+        "authorId": "70209653",
+        "reviewText": "Significant improvements are required for the section on Contact tracing.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "1cff064f815111a71a98afda7aee1867ad617901",
+        "authorId": "2321412875",
+        "reviewText": "Not convinced by the arguments around Hainan Province. Needs major revisions.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "1cff064f815111a71a98afda7aee1867ad617901",
+        "authorId": "2118207557",
+        "reviewText": "Some parts of the paper on Hainan are worth considering, but overall unclear.",
+        "decision": "no"
+    },
+    {
+        "paperId": "7bb477077968d68aa7a6059d8d6d801fb28274da",
+        "authorId": "2879007",
+        "reviewText": "This paper presents promising ideas about general research topic.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "7bb477077968d68aa7a6059d8d6d801fb28274da",
+        "authorId": "19262604",
+        "reviewText": "The paper covers general research topic but lacks depth in some areas.",
+        "decision": "no"
+    },
+    {
+        "paperId": "7bb477077968d68aa7a6059d8d6d801fb28274da",
+        "authorId": "1709642",
+        "reviewText": "Some parts of the paper on general research topic are worth considering, but overall unclear.",
+        "decision": "no"
+    },
+    {
+        "paperId": "7bb477077968d68aa7a6059d8d6d801fb28274da",
+        "authorId": "2424392",
+        "reviewText": "Some parts of the paper on general research topic are worth considering, but overall unclear.",
+        "decision": "no"
+    },
+    {
+        "paperId": "21042565ec941f4fa31ac5a0af85a1a84ff21f1b",
+        "authorId": "72117196",
+        "reviewText": "Not convinced by the arguments around Knowledge Graph. Needs major revisions.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "21042565ec941f4fa31ac5a0af85a1a84ff21f1b",
+        "authorId": "1625425838",
+        "reviewText": "The paper introduces Ontologies but needs further clarification.",
+        "decision": "no"
+    },
+    {
+        "paperId": "21042565ec941f4fa31ac5a0af85a1a84ff21f1b",
+        "authorId": "2109512262",
+        "reviewText": "Paper is lacking in depth on Graph. Needs better analysis.",
+        "decision": "no"
+    },
+    {
+        "paperId": "9b3e8d202488dc29e601fc471a25a2af9002659e",
+        "authorId": "144658846",
+        "reviewText": "The paper introduces construction but needs further clarification.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "9b3e8d202488dc29e601fc471a25a2af9002659e",
+        "authorId": "144525882",
+        "reviewText": "Paper is lacking in depth on construction management. Needs better analysis.",
+        "decision": "no"
+    },
+    {
+        "paperId": "9b3e8d202488dc29e601fc471a25a2af9002659e",
+        "authorId": "2118120527",
+        "reviewText": "Some parts of the paper on information model are worth considering, but overall unclear.",
+        "decision": "no"
+    },
+    {
+        "paperId": "9b3e8d202488dc29e601fc471a25a2af9002659e",
+        "authorId": "50841357",
+        "reviewText": "Great insights into information model. Could be a game changer.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "09f54c64b39f5f7e7570f9f4ce3e3af544401e14",
+        "authorId": "2057038192",
+        "reviewText": "This paper presents promising ideas about graph.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "09f54c64b39f5f7e7570f9f4ce3e3af544401e14",
+        "authorId": "2108248686",
+        "reviewText": "Some parts of the paper on graph are worth considering, but overall unclear.",
+        "decision": "no"
+    },
+    {
+        "paperId": "09f54c64b39f5f7e7570f9f4ce3e3af544401e14",
+        "authorId": "1403082590",
+        "reviewText": "Significant improvements are required for the section on graph database.",
+        "decision": "no"
+    },
+    {
+        "paperId": "09f54c64b39f5f7e7570f9f4ce3e3af544401e14",
+        "authorId": "143911374",
+        "reviewText": "The paper introduces data grow but needs further clarification.",
+        "decision": "no"
+    },
+    {
+        "paperId": "a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358",
+        "authorId": "2054289955",
+        "reviewText": "The paper covers general research topic but lacks depth in some areas.",
+        "decision": "no"
+    },
+    {
+        "paperId": "a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358",
+        "authorId": "5779643",
+        "reviewText": "The paper introduces general research topic but needs further clarification.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358",
+        "authorId": "2151811827",
+        "reviewText": "Significant improvements are required for the section on general research topic.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "authorId": "2144671306",
+        "reviewText": "Paper is lacking in depth on time-version support. Needs better analysis.",
+        "decision": "no"
+    },
+    {
+        "paperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "authorId": "2424392",
+        "reviewText": "Not convinced by the arguments around found applications. Needs major revisions.",
+        "decision": "yes"
+    },
+    {
+        "paperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "authorId": "2158585032",
+        "reviewText": "Paper is lacking in depth on graph databases. Needs better analysis.",
+        "decision": "no"
+    },
+    {
+        "paperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
+        "authorId": "2695617",
+        "reviewText": "Paper is lacking in depth on time-version support. Needs better analysis.",
+        "decision": "no"
+    },
+    {
+        "paperId": "91d6e8ba5dd90b02fe3bd870b19da13a6167af53",
+        "authorId": "10313020",
+        "reviewText": "The paper introduces general research topic but needs further clarification.",
+        "decision": "no"
+    },
+    {
+        "paperId": "91d6e8ba5dd90b02fe3bd870b19da13a6167af53",
+        "authorId": "2116124684",
+        "reviewText": "Interesting research, especially the section on general research topic.",
+        "decision": "no"
+    },
+    {
+        "paperId": "91d6e8ba5dd90b02fe3bd870b19da13a6167af53",
+        "authorId": "23214019",
+        "reviewText": "Paper is lacking in depth on general research topic. Needs better analysis.",
         "decision": "no"
     }
 ]

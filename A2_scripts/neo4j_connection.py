@@ -1,7 +1,7 @@
 from neo4j import GraphDatabase
 import csv
 import os
-import uuid
+import sys
 
 # Connect to Neo4j
 uri = "bolt://localhost:7687"
@@ -39,6 +39,11 @@ for query in create_constraints_queries:
 
 # Folder containing the CSV files
 folder_path = os.path.join(os.path.dirname(__file__), "../CSVfiles")
+
+# Check if the JSON folder exists, if not, exit the script
+if not os.path.exists(folder_path):
+    print(f"❌ The folder '{folder_path}' does not exist. Stopping the script.")
+    sys.exit()  # Exit the script if folder does not exist
 
 # Step 2: Import CSV files as Nodes
 def import_csv_to_neo4j(csv_path, label, unique_field):
@@ -80,6 +85,10 @@ for filename, (label, unique_field) in csv_files.items():
         print(f"📥 Importing {csv_path} as `{label}` nodes...")
         import_csv_to_neo4j(csv_path, label, unique_field)
         print(f"✅ `{label}` nodes imported successfully!")
+    else:
+        print(f"❌ Skipping {filename}: File does not exist.")
+        print("Fail to fetch data.")
+        sys.exit()
 
 
 # Step 3: Create Relationships

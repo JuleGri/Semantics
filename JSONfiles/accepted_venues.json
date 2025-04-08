@@ -4,7 +4,7 @@
         "venue": "International Symposium on Software Testing and Analysis",
         "year": 2023,
         "type": "conference",
-        "city": "Seoul"
+        "city": "Rome"
     },
     {
         "venueId": "f80a2e54-1332-48bf-9634-4b2f77fca809",
@@ -25,7 +25,14 @@
         "venue": "International Symposium on Software Testing and Analysis",
         "year": 2022,
         "type": "conference",
-        "city": "Tokyo"
+        "city": "Barcelona"
+    },
+    {
+        "venueId": "f1d0ef3d-4e90-41e9-b454-f589a933654f",
+        "venue": "Cluster Computing",
+        "year": 2022,
+        "type": "journal",
+        "volume": "26"
     },
     {
         "venueId": "fcbcaf18-8ab1-43e1-a973-604bbc7e344e",
@@ -35,11 +42,18 @@
         "volume": "15"
     },
     {
-        "venueId": "ccd8e532-73c6-414f-bc91-271bbb2933e2",
-        "venue": "Electronics",
+        "venueId": "8f515bf7-e3c7-4242-85e5-14de4c29e76c",
+        "venue": "Symposium on Information and Communication Technology",
+        "year": 2022,
+        "type": "conference",
+        "city": "New York"
+    },
+    {
+        "venueId": "bb899a20-6789-46e4-9ed0-c7c284028fd9",
+        "venue": "JMIR mHealth and uHealth",
         "year": 2021,
         "type": "journal",
-        "volume": "N/A"
+        "volume": "9"
     },
     {
         "venueId": "136edf8d-0f88-4c2c-830f-461c6a9b842e",
@@ -49,24 +63,10 @@
         "volume": "N/A"
     },
     {
-        "venueId": "e82485bc-2195-4cf5-9f9a-012501918b2f",
-        "venue": "Annual Conference on Innovation and Technology in Computer Science Education",
-        "year": 2021,
-        "type": "conference",
-        "city": "Copenhagen"
-    },
-    {
         "venueId": "3e22d1e0-9b11-40a4-ac7c-0ebe5825316e",
         "venue": "Knowledge Science, Engineering and Management",
         "year": 2020,
         "type": "conference",
-        "city": "New York"
-    },
-    {
-        "venueId": "66c268f7-ba60-443f-919d-e2c297910401",
-        "venue": "International Conference on Computational Collective Intelligence",
-        "year": 2020,
-        "type": "conference",
-        "city": "Copenhagen"
+        "city": "Bilbao"
     }
 ]

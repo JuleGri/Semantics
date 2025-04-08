@@ -2,10 +2,6 @@ import subprocess
 import sys
 import os
 
-print("Python executable being used: ", sys.executable)
-
-print(f"Current working directory: {os.getcwd()}")
-
 # Define the paths to the scripts
 extract_json_script = "A2_scripts/extract_to_json.py"
 converttocsv_script = "A2_scripts/Converttocsv.py"
