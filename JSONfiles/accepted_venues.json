@@ -28,32 +28,11 @@
         "city": "Tokyo"
     },
     {
-        "venueId": "f1d0ef3d-4e90-41e9-b454-f589a933654f",
-        "venue": "Cluster Computing",
-        "year": 2022,
-        "type": "journal",
-        "volume": "26"
-    },
-    {
         "venueId": "fcbcaf18-8ab1-43e1-a973-604bbc7e344e",
         "venue": "Proceedings of the VLDB Endowment",
         "year": 2022,
         "type": "journal",
         "volume": "15"
-    },
-    {
-        "venueId": "8f515bf7-e3c7-4242-85e5-14de4c29e76c",
-        "venue": "Symposium on Information and Communication Technology",
-        "year": 2022,
-        "type": "conference",
-        "city": "Sydney"
-    },
-    {
-        "venueId": "9bc76c9a-64ac-4dd9-902e-80fccca1833f",
-        "venue": "The Arabian journal for science and engineering",
-        "year": 2021,
-        "type": "journal",
-        "volume": "46"
     },
     {
         "venueId": "ccd8e532-73c6-414f-bc91-271bbb2933e2",
@@ -82,20 +61,6 @@
         "year": 2020,
         "type": "conference",
         "city": "New York"
-    },
-    {
-        "venueId": "f4784c7b-6592-49eb-a116-7290e0398868",
-        "venue": "Journal of Advances in Information Technology",
-        "year": 2020,
-        "type": "journal",
-        "volume": "N/A"
-    },
-    {
-        "venueId": "66257d67-2035-4ff6-b62a-4099db02fcde",
-        "venue": "Alberto Mendelzon Workshop on Foundations of Data Management",
-        "year": 2018,
-        "type": "Workshop",
-        "city": "Amsterdam"
     },
     {
         "venueId": "66c268f7-ba60-443f-919d-e2c297910401",

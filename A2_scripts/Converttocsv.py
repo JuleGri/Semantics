@@ -3,8 +3,11 @@ import csv
 import os
 
 # Define the folder containing JSON files
-json_folder_path = "JSONfiles"
-csv_folder_path = "CSVfiles"
+json_folder_path = os.path.join(os.path.dirname(__file__), "../JSONfiles")
+csv_folder_path = os.path.join(os.path.dirname(__file__), "../CSVfiles")
+
+print(f"JSON folder path: {json_folder_path}")
+print(f"CSV folder path: {csv_folder_path}")
 
 def flatten_dict(d, parent_key='', sep='_'):
     """Recursively flattens nested dictionaries."""
