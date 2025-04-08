@@ -1,5 +1,8 @@
 # 1. 3 most cited papers per venue
 
+    Steps:
+    1. 
+
 # 2. Per venue (in general, not one specific edition), find the author community with authors that have published in 4 different editions of that venue
 
 # 3. Find Impact Factor per Journal
@@ -9,8 +12,35 @@
     2. Count all papers, published in that journal in 2022, 2021
     3. divide the citings from 1. by the papers from 2. 
 
+    Cypher Query for 2023:
+    MATCH (citing:Paper)-[:CITES]->(cited:Paper)-[:PUBLISHED_IN]->(j:Journal)
+    WHERE cited.year IN [2021, 2022] AND citing.year = 2023
+    WITH j, COUNT(citing) AS totalCitations
+
+    MATCH (j)<-[:PUBLISHED_IN]-(p:Paper)
+    WHERE p.year IN [2021, 2022]
+    WITH j.name AS journalName, totalCitations, COUNT(p) AS paperCount
+    RETURN journalName, 
+        totalCitations * 1.0 / paperCount AS impactFactor
+    ORDER BY impactFactor DESC;
+
 # 4. Find hIndex per Author
 
     Steps:
-    1. Count the Papers, published by one author (p)
-    2. Count the Papers by that author, with a citationcount >= p
+    1. Count the Papers, published by one author (h)
+    2. Count the Papers by that author, with a citationcount >= h
+
+    Cypher Query:
+    MATCH (a:Author)-[:AUTHORED]->(p:Paper)
+    WITH a.name AS authorName, collect(p.citationCount) AS citations
+
+    // Sort and compute h-index
+    WITH authorName, apoc.coll.sort(citations) AS sortedCitations
+    WITH authorName, [i IN range(0, size(sortedCitations)-1) 
+                    WHERE sortedCitations[-i-1] >= i+1 | i+1] AS hCandidates
+    RETURN authorName, 
+        CASE 
+            WHEN size(hCandidates) = 0 THEN 0 
+            ELSE max(hCandidates) 
+        END AS hIndex
+    ORDER BY hIndex DESC;
