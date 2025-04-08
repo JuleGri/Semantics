@@ -51,11 +51,20 @@ def import_csv_to_neo4j(csv_path, label, unique_field):
                 continue  # Skip rows with missing unique field
 
             # Ensure "venue" is prioritized as a display field
-            row["name"] = row.get("venue", "Unknown Venue")  # Set "name" field to "venue"
+            if label == 'Venue':  # Only set the 'name' field for venue nodes
+                row["name"] = row.get("venue", "Unknown Venue")  # Set "name" field to "venue"
 
             properties = ", ".join([f"{key}: ${key}" for key in row.keys()])
             query = f"MERGE (n:{label} {{ {unique_field}: ${unique_field} }}) SET n += {{ {properties} }}"
             run_query(query, row)
+
+            #TRYING TO FIX THE PROBLEM OF NEO4J SHOWING THE VOLUME INSTEAD OF NAME FOR THE VENUES
+            # Create an index on 'name' for Venue nodes (if it's a Venue node)
+            if label == 'Venue':
+                create_index_query = """
+                           CREATE INDEX IF NOT EXISTS FOR (v:Venue) ON (v.name)
+                           """
+                run_query(create_index_query, {})
 
 # Import CSV files
 csv_files = {
@@ -100,7 +109,7 @@ with open(os.path.join(folder_path, "papers.csv"), "r", encoding="utf-8") as pap
                     break  # Once we find the correct author, break the inner loop
 
 '''
-
+'''
 # (Author)-[:WROTE]->(Paper)
 with open(os.path.join(folder_path, "papers.csv"), "r", encoding="utf-8") as papers_file:
     papers_reader = csv.DictReader(papers_file)
@@ -143,6 +152,38 @@ with open(os.path.join(folder_path, "papers.csv"), "r", encoding="utf-8") as pap
                         }
                         run_query(query, params)
                         break  # Once we find the co-author, break the loop
+'''
+
+# (Author)-[:FIRST_AUTHORED]->(Paper) & (Author)-[:CO_AUTHORED]->(Paper)
+with open(os.path.join(folder_path, "papers.csv"), "r", encoding="utf-8") as papers_file:
+    papers_reader = csv.DictReader(papers_file)
+    for paper_row in papers_reader:
+        paper_id = paper_row.get("paperId")
+        first_author_id = paper_row.get("firstAuthor")
+        other_authors_ids = paper_row.get("otherAuthors", "").split(",") if paper_row.get("otherAuthors") else []
+
+        # ✅ First Author Relationship
+        if first_author_id and first_author_id != "N/A":
+            query = """
+            MATCH (a:Author {authorId: $authorId})
+            MATCH (p:Paper {paperId: $paperId})
+            MERGE (a)-[:FIRST_AUTHORED]->(p)
+            """
+            params = {"authorId": first_author_id, "paperId": paper_id}
+            run_query(query, params)
+
+        # ✅ Co-Authors Relationships
+        for co_author_id in other_authors_ids:
+            co_author_id = co_author_id.strip()  # Remove whitespace
+            if co_author_id and co_author_id != "N/A":
+                query = """
+                MATCH (a:Author {authorId: $authorId})
+                MATCH (p:Paper {paperId: $paperId})
+                MERGE (a)-[:CO_AUTHORED]->(p)
+                """
+                params = {"authorId": co_author_id, "paperId": paper_id}
+                run_query(query, params)
+
 
 # (Paper)-[:PUBLISHED_IN]->(Venue)
 with open(os.path.join(folder_path, "papers.csv"), "r", encoding="utf-8") as f:
