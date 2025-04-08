@@ -1,0 +1,7 @@
+yake==0.4.8
+requests==2.32.3
+neo4j==5.28.1
+
+# Built-in modules (no need to install):
+# uuid
+

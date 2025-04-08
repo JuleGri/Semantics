@@ -23,11 +23,12 @@
         "citationCount": 24,
         "influentialCitationCount": 2,
         "reviewers": [
-            "2879007",
+            "2140474907",
             "143911374",
             "2088215217",
-            "2140474907"
-        ]
+            "2879007"
+        ],
+        "accepted": true
     },
     {
         "paperId": "6c755fc901d0b41a5d73c265f64a5aacf62e83b8",
@@ -56,10 +57,11 @@
         "citationCount": 17,
         "influentialCitationCount": 3,
         "reviewers": [
-            "2158585032",
+            "101108644",
             "2695617",
-            "101108644"
-        ]
+            "2158585032"
+        ],
+        "accepted": true
     },
     {
         "paperId": "61c931d50f3e32f70abf1bccddf2479212dd2fde",
@@ -94,11 +96,10 @@
         "pages": "560-610",
         "reviewers": [
             "98831679",
-            "2145763285",
-            "2964640",
-            "144352362",
-            "2153604994"
-        ]
+            "2153604994",
+            "2145763285"
+        ],
+        "accepted": true
     },
     {
         "paperId": "2c3eef2f17369912e330281d54b535675077e4ca",
@@ -132,7 +133,8 @@
             "2167037428",
             "134898163",
             "1725650"
-        ]
+        ],
+        "accepted": true
     },
     {
         "paperId": "e67a2817089312746d69b38ce9abfdc4b1bc69c3",
@@ -163,11 +165,11 @@
         "citationCount": 31,
         "influentialCitationCount": 3,
         "reviewers": [
-            "19262604",
-            "101108644",
             "2142659443",
-            "32058742"
-        ]
+            "101108644",
+            "19262604"
+        ],
+        "accepted": false
     },
     {
         "paperId": "fe4c5074f021cd1c810892c1b6bc267b23aa6e5c",
@@ -188,10 +190,10 @@
         "pages": "515-537",
         "reviewers": [
             "2115219530",
-            "10313020",
-            "1625425838",
-            "2153604994"
-        ]
+            "2153604994",
+            "1625425838"
+        ],
+        "accepted": false
     },
     {
         "paperId": "d1ae4ab5047489c2b010c7ce72262982ad66ad60",
@@ -241,12 +243,13 @@
         "influentialCitationCount": 2,
         "pages": "3306-3318",
         "reviewers": [
-            "98831679",
             "40231586",
-            "1403082590",
+            "98831679",
             "72117196",
+            "1403082590",
             "2873542"
-        ]
+        ],
+        "accepted": true
     },
     {
         "paperId": "75a8faa6861b7fdd49b36615df1835f1c4bbcb65",
@@ -272,11 +275,10 @@
         "pages": "2545-2558",
         "reviewers": [
             "2054838160",
-            "2153604994",
-            "2873542",
-            "2344391699",
-            "2088215217"
-        ]
+            "2088215217",
+            "2344391699"
+        ],
+        "accepted": false
     },
     {
         "paperId": "5534c3b8bfe03ec0ee3ea3aafd0a4471b07f8b7d",
@@ -302,11 +304,11 @@
         "citationCount": 8,
         "influentialCitationCount": 0,
         "reviewers": [
-            "46255707",
-            "72117196",
             "2116124684",
-            "2424392"
-        ]
+            "2424392",
+            "72117196"
+        ],
+        "accepted": true
     },
     {
         "paperId": "7bb477077968d68aa7a6059d8d6d801fb28274da",
@@ -327,11 +329,11 @@
         "influentialCitationCount": 1,
         "pages": "1 - 20",
         "reviewers": [
-            "2157513188",
-            "1625425838",
             "123816348",
-            "134898163"
-        ]
+            "134898163",
+            "1625425838"
+        ],
+        "accepted": false
     },
     {
         "paperId": "1cff064f815111a71a98afda7aee1867ad617901",
@@ -363,7 +365,8 @@
             "144615268",
             "2108248686",
             "2057038192"
-        ]
+        ],
+        "accepted": false
     },
     {
         "paperId": "21042565ec941f4fa31ac5a0af85a1a84ff21f1b",
@@ -387,12 +390,13 @@
         "influentialCitationCount": 0,
         "pages": "N/A",
         "reviewers": [
-            "31131132",
-            "1625425838",
-            "2879007",
             "2964640",
+            "1625425838",
+            "31131132",
+            "2879007",
             "2157513188"
-        ]
+        ],
+        "accepted": true
     },
     {
         "paperId": "9b3e8d202488dc29e601fc471a25a2af9002659e",
@@ -422,12 +426,11 @@
         "influentialCitationCount": 0,
         "pages": "N/A",
         "reviewers": [
-            "1754091",
-            "2108844303",
+            "2118207557",
             "3010622",
-            "2280834096",
-            "2118207557"
-        ]
+            "1754091"
+        ],
+        "accepted": false
     },
     {
         "paperId": "09f54c64b39f5f7e7570f9f4ce3e3af544401e14",
@@ -453,10 +456,11 @@
         "citationCount": 8,
         "influentialCitationCount": 0,
         "reviewers": [
-            "2321412875",
             "2108844303",
-            "1403082590"
-        ]
+            "1403082590",
+            "2321412875"
+        ],
+        "accepted": true
     },
     {
         "paperId": "a604aa1f2a2ca1a6a0b09013e71b83d36cc0f358",
@@ -479,7 +483,8 @@
             "1492120545",
             "3010622",
             "144007515"
-        ]
+        ],
+        "accepted": true
     },
     {
         "paperId": "0601e9e434b30320c316c76228b97c093fa98ad6",
@@ -509,7 +514,8 @@
             "30188257",
             "2093481779",
             "2157513188"
-        ]
+        ],
+        "accepted": false
     },
     {
         "paperId": "91d6e8ba5dd90b02fe3bd870b19da13a6167af53",
@@ -529,6 +535,7 @@
             "2142659443",
             "2115905112",
             "2171106811"
-        ]
+        ],
+        "accepted": true
     }
 ]

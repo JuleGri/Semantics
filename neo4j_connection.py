@@ -31,7 +31,7 @@ create_constraints_queries = [
     "CREATE CONSTRAINT IF NOT EXISTS FOR (a:Author) REQUIRE a.authorId IS UNIQUE;",
     "CREATE CONSTRAINT IF NOT EXISTS FOR (p:Paper) REQUIRE p.paperId IS UNIQUE;",
     "CREATE CONSTRAINT IF NOT EXISTS FOR (v:Venue) REQUIRE v.venueId IS UNIQUE;",
-    "CREATE CONSTRAINT IF NOT EXISTS FOR (r:Review) REQUIRE r.reviewId IS UNIQUE;"
+   # "CREATE CONSTRAINT IF NOT EXISTS FOR (r:Review) REQUIRE r.reviewId IS UNIQUE;"
 ]
 
 for query in create_constraints_queries:
@@ -227,7 +227,7 @@ with open(os.path.join(folder_path, "references.csv"), "r", encoding="utf-8") as
             MERGE (p1)-[:REFERENCES]->(p2)
             """
             run_query(query, row)
-
+'''
 # (Review)-[:WROTE_REVIEW]->(Author) & (Review)-[:REVIEWS]->(Paper)
 with open(os.path.join(folder_path, "reviews.csv"), "r", encoding="utf-8") as f:
     reader = csv.DictReader(f)
@@ -259,7 +259,7 @@ with open(os.path.join(folder_path, "reviews.csv"), "r", encoding="utf-8") as f:
         run_query(query, row)
 
 
-
+'''
 print("🎉 All CSV data and relationships successfully imported into Neo4j!")
 
 # Close Neo4j connection
