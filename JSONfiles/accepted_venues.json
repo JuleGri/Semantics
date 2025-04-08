@@ -4,7 +4,14 @@
         "venue": "International Symposium on Software Testing and Analysis",
         "year": 2023,
         "type": "conference",
-        "city": "London"
+        "city": "Rome"
+    },
+    {
+        "venueId": "f80a2e54-1332-48bf-9634-4b2f77fca809",
+        "venue": "Data Intelligence",
+        "year": 2023,
+        "type": "journal",
+        "volume": "5"
     },
     {
         "venueId": "fcbcaf18-8ab1-43e1-a973-604bbc7e344e",
@@ -18,7 +25,14 @@
         "venue": "International Symposium on Software Testing and Analysis",
         "year": 2022,
         "type": "conference",
-        "city": "Tokyo"
+        "city": "Barcelona"
+    },
+    {
+        "venueId": "f1d0ef3d-4e90-41e9-b454-f589a933654f",
+        "venue": "Cluster Computing",
+        "year": 2022,
+        "type": "journal",
+        "volume": "26"
     },
     {
         "venueId": "fcbcaf18-8ab1-43e1-a973-604bbc7e344e",
@@ -32,7 +46,7 @@
         "venue": "Symposium on Information and Communication Technology",
         "year": 2022,
         "type": "conference",
-        "city": "Montreal"
+        "city": "New York"
     },
     {
         "venueId": "bb899a20-6789-46e4-9ed0-c7c284028fd9",
@@ -42,38 +56,17 @@
         "volume": "9"
     },
     {
-        "venueId": "9bc76c9a-64ac-4dd9-902e-80fccca1833f",
-        "venue": "The Arabian journal for science and engineering",
-        "year": 2021,
-        "type": "journal",
-        "volume": "46"
-    },
-    {
-        "venueId": "ccd8e532-73c6-414f-bc91-271bbb2933e2",
-        "venue": "Electronics",
+        "venueId": "136edf8d-0f88-4c2c-830f-461c6a9b842e",
+        "venue": "Applied Sciences",
         "year": 2021,
         "type": "journal",
         "volume": "N/A"
-    },
-    {
-        "venueId": "e82485bc-2195-4cf5-9f9a-012501918b2f",
-        "venue": "Annual Conference on Innovation and Technology in Computer Science Education",
-        "year": 2021,
-        "type": "conference",
-        "city": "Bilbao"
     },
     {
         "venueId": "3e22d1e0-9b11-40a4-ac7c-0ebe5825316e",
         "venue": "Knowledge Science, Engineering and Management",
         "year": 2020,
         "type": "conference",
-        "city": "Barcelona"
-    },
-    {
-        "venueId": "f4784c7b-6592-49eb-a116-7290e0398868",
-        "venue": "Journal of Advances in Information Technology",
-        "year": 2020,
-        "type": "journal",
-        "volume": "N/A"
+        "city": "Bilbao"
     }
 ]

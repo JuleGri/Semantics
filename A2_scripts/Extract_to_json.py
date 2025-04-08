@@ -3,6 +3,7 @@ import requests
 import json
 import random
 import yake
+import sys
 
 # Initialize YAKE keyword extractor
 kw_extractor = yake.KeywordExtractor(lan="en", n=2, dedupLim=0.9, top=5)  # Extract up to 5 key phrases
@@ -26,6 +27,10 @@ if response.status_code == 200:
     processed_papers = []  # Store processed paper data
     reviews = []  # List to store reviews
 
+    # If we hit a 429 error (Too Many Requests), stop the script
+    if response.status_code == 429:
+        print("❌ Too many requests. Exiting the script.")
+        sys.exit()
 
     for paper in papers:
         paper_id = paper.get("paperId", "N/A")

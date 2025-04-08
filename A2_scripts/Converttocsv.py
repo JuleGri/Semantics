@@ -1,13 +1,16 @@
 import json
 import csv
 import os
+import sys
 
 # Define the folder containing JSON files
 json_folder_path = os.path.join(os.path.dirname(__file__), "../JSONfiles")
 csv_folder_path = os.path.join(os.path.dirname(__file__), "../CSVfiles")
 
-print(f"JSON folder path: {json_folder_path}")
-print(f"CSV folder path: {csv_folder_path}")
+# Check if the JSON folder exists, if not, exit the script
+if not os.path.exists(json_folder_path):
+    print(f"❌ The folder '{json_folder_path}' does not exist. Stopping the script.")
+    sys.exit()  # Exit the script if folder does not exist
 
 def flatten_dict(d, parent_key='', sep='_'):
     """Recursively flattens nested dictionaries."""

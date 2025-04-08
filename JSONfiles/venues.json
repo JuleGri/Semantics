@@ -4,7 +4,7 @@
         "venue": "International Symposium on Software Testing and Analysis",
         "year": 2023,
         "type": "conference",
-        "city": "London"
+        "city": "Toronto"
     },
     {
         "venueId": "f80a2e54-1332-48bf-9634-4b2f77fca809",
@@ -25,7 +25,7 @@
         "venue": "International Symposium on Software Testing and Analysis",
         "year": 2022,
         "type": "conference",
-        "city": "Tokyo"
+        "city": "Bilbao"
     },
     {
         "venueId": "f1d0ef3d-4e90-41e9-b454-f589a933654f",
@@ -46,14 +46,7 @@
         "venue": "Symposium on Information and Communication Technology",
         "year": 2022,
         "type": "conference",
-        "city": "Montreal"
-    },
-    {
-        "venueId": "bb899a20-6789-46e4-9ed0-c7c284028fd9",
-        "venue": "JMIR mHealth and uHealth",
-        "year": 2021,
-        "type": "journal",
-        "volume": "9"
+        "city": "Rome"
     },
     {
         "venueId": "9bc76c9a-64ac-4dd9-902e-80fccca1833f",
@@ -61,6 +54,13 @@
         "year": 2021,
         "type": "journal",
         "volume": "46"
+    },
+    {
+        "venueId": "bb899a20-6789-46e4-9ed0-c7c284028fd9",
+        "venue": "JMIR mHealth and uHealth",
+        "year": 2021,
+        "type": "journal",
+        "volume": "9"
     },
     {
         "venueId": "ccd8e532-73c6-414f-bc91-271bbb2933e2",
@@ -81,7 +81,7 @@
         "venue": "Annual Conference on Innovation and Technology in Computer Science Education",
         "year": 2021,
         "type": "conference",
-        "city": "Bilbao"
+        "city": "Seoul"
     },
     {
         "venueId": "3e22d1e0-9b11-40a4-ac7c-0ebe5825316e",
