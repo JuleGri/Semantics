@@ -328,7 +328,7 @@ if response.status_code == 200:
     ###################### SAVE TO JSON ######################
 
     # Create the JSON folder PATH
-    json_folder_path = "JSONfiles"
+    json_folder_path = os.path.join(os.path.dirname(__file__), "../JSONfiles")
     os.makedirs(json_folder_path, exist_ok=True)
 
     # Save processed papers to JSON

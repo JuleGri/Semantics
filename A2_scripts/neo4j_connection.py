@@ -38,7 +38,7 @@ for query in create_constraints_queries:
     run_query(query)
 
 # Folder containing the CSV files
-folder_path = "CSVfiles"
+folder_path = os.path.join(os.path.dirname(__file__), "../CSVfiles")
 
 # Step 2: Import CSV files as Nodes
 def import_csv_to_neo4j(csv_path, label, unique_field):

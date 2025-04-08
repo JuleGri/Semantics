@@ -23,10 +23,11 @@
         "citationCount": 24,
         "influentialCitationCount": 2,
         "reviewers": [
-            "2879007",
-            "143911374",
-            "2088215217",
-            "2140474907"
+            "134898163",
+            "2057038192",
+            "2108248686",
+            "2873542",
+            "2157513188"
         ]
     },
     {
@@ -56,9 +57,11 @@
         "citationCount": 17,
         "influentialCitationCount": 3,
         "reviewers": [
-            "2158585032",
-            "2695617",
-            "101108644"
+            "144007515",
+            "30188257",
+            "152125305",
+            "2321412875",
+            "38319925"
         ]
     },
     {
@@ -93,11 +96,9 @@
         "influentialCitationCount": 3,
         "pages": "560-610",
         "reviewers": [
-            "98831679",
-            "2145763285",
-            "2964640",
-            "144352362",
-            "2153604994"
+            "30188257",
+            "2280834096",
+            "5779643"
         ]
     },
     {
@@ -128,10 +129,10 @@
         "influentialCitationCount": 1,
         "pages": "1790-1803",
         "reviewers": [
-            "1663632797",
-            "2167037428",
-            "134898163",
-            "1725650"
+            "2151811827",
+            "2148303656",
+            "38319925",
+            "2112409349"
         ]
     },
     {
@@ -163,10 +164,11 @@
         "citationCount": 31,
         "influentialCitationCount": 3,
         "reviewers": [
-            "19262604",
-            "101108644",
-            "2142659443",
-            "32058742"
+            "152781515",
+            "2164445100",
+            "46255707",
+            "2151811827",
+            "2192611227"
         ]
     },
     {
@@ -187,10 +189,9 @@
         "influentialCitationCount": 0,
         "pages": "515-537",
         "reviewers": [
-            "2115219530",
-            "10313020",
-            "1625425838",
-            "2153604994"
+            "2304958793",
+            "2873542",
+            "2131285720"
         ]
     },
     {
@@ -241,11 +242,10 @@
         "influentialCitationCount": 2,
         "pages": "3306-3318",
         "reviewers": [
-            "98831679",
-            "40231586",
-            "1403082590",
-            "72117196",
-            "2873542"
+            "2772109",
+            "2059572334",
+            "2171106811",
+            "2118207557"
         ]
     },
     {
@@ -271,11 +271,11 @@
         "influentialCitationCount": 0,
         "pages": "2545-2558",
         "reviewers": [
-            "2054838160",
-            "2153604994",
-            "2873542",
-            "2344391699",
-            "2088215217"
+            "2059572334",
+            "1490915504",
+            "2118207557",
+            "1725650",
+            "144525882"
         ]
     },
     {
@@ -302,10 +302,9 @@
         "citationCount": 8,
         "influentialCitationCount": 0,
         "reviewers": [
-            "46255707",
-            "72117196",
-            "2116124684",
-            "2424392"
+            "2142659443",
+            "2088215217",
+            "30188257"
         ]
     },
     {
@@ -327,42 +326,9 @@
         "influentialCitationCount": 1,
         "pages": "1 - 20",
         "reviewers": [
-            "2157513188",
-            "1625425838",
-            "123816348",
-            "134898163"
-        ]
-    },
-    {
-        "paperId": "1cff064f815111a71a98afda7aee1867ad617901",
-        "title": "Digital Contact Tracing Based on a Graph Database Algorithm for Emergency Management During the COVID-19 Epidemic: Case Study",
-        "year": 2021,
-        "firstAuthor": "2054289955",
-        "otherAuthors": [
-            "101108644",
-            "2054838160",
-            "1492120545",
-            "2115905112"
-        ],
-        "venueId": "bb899a20-6789-46e4-9ed0-c7c284028fd9",
-        "venue": "JMIR mHealth and uHealth",
-        "venueType": "journal",
-        "abstract": "Background The COVID-19 epidemic is still spreading globally. Contact tracing is a vital strategy in epidemic emergency management; however, traditional contact tracing faces many limitations in practice. The application of digital technology provides an opportunity for local governments to trace the contacts of individuals with COVID-19 more comprehensively, efficiently, and precisely. Objective Our research aimed to provide new solutions to overcome the limitations of traditional contact tracing by introducing the organizational process, technical process, and main achievements of digital contact tracing in Hainan Province. Methods A graph database algorithm, which can efficiently process complex relational networks, was applied in Hainan Province; this algorithm relies on a governmental big data platform to analyze multisource COVID-19 epidemic data and build networks of relationships among high-risk infected individuals, the general population, vehicles, and public places to identify and trace contacts. We summarized the organizational and technical process of digital contact tracing in Hainan Province based on interviews and data analyses. Results An integrated emergency management command system and a multi-agency coordination mechanism were formed during the emergency management of the COVID-19 epidemic in Hainan Province. The collection, storage, analysis, and application of multisource epidemic data were realized based on the government\u2019s big data platform using a centralized model. The graph database algorithm is compatible with this platform and can analyze multisource and heterogeneous big data related to the epidemic. These practices were used to quickly and accurately identify and trace 10,871 contacts among hundreds of thousands of epidemic data records; 378 closest contacts and a number of public places with high risk of infection were identified. A confirmed patient was found after quarantine measures were implemented by all contacts. Conclusions During the emergency management of the COVID-19 epidemic, Hainan Province used a graph database algorithm to trace contacts in a centralized model, which can identify infected individuals and high-risk public places more quickly and accurately. This practice can provide support to government agencies to implement precise, agile, and evidence-based emergency management measures and improve the responsiveness of the public health emergency response system. Strengthening data security, improving tracing accuracy, enabling intelligent data collection, and improving data-sharing mechanisms and technologies are directions for optimizing digital contact tracing.",
-        "keywords": [
-            "Hainan Province",
-            "Contact tracing",
-            "Hainan",
-            "Province",
-            "data"
-        ],
-        "volume": "9",
-        "citationCount": 20,
-        "influentialCitationCount": 1,
-        "pages": "N/A",
-        "reviewers": [
-            "144615268",
-            "2108248686",
-            "2057038192"
+            "2116124684",
+            "2964640",
+            "2088215217"
         ]
     },
     {
@@ -387,11 +353,10 @@
         "influentialCitationCount": 0,
         "pages": "N/A",
         "reviewers": [
-            "31131132",
-            "1625425838",
-            "2879007",
-            "2964640",
-            "2157513188"
+            "66913593",
+            "2116124684",
+            "150358651",
+            "144615268"
         ]
     },
     {
@@ -422,11 +387,10 @@
         "influentialCitationCount": 0,
         "pages": "N/A",
         "reviewers": [
-            "1754091",
-            "2108844303",
-            "3010622",
-            "2280834096",
-            "2118207557"
+            "2144671306",
+            "2088215217",
+            "2148303656",
+            "1709642"
         ]
     },
     {
@@ -453,9 +417,11 @@
         "citationCount": 8,
         "influentialCitationCount": 0,
         "reviewers": [
+            "2109512262",
+            "144615268",
+            "2153604994",
             "2321412875",
-            "2108844303",
-            "1403082590"
+            "1490915504"
         ]
     },
     {
@@ -476,9 +442,11 @@
         "citationCount": 15,
         "influentialCitationCount": 1,
         "reviewers": [
-            "1492120545",
-            "3010622",
-            "144007515"
+            "144615268",
+            "143911374",
+            "2140474907",
+            "2145763285",
+            "2517099"
         ]
     },
     {
@@ -506,9 +474,9 @@
         "influentialCitationCount": 0,
         "pages": "N/A",
         "reviewers": [
-            "30188257",
-            "2093481779",
-            "2157513188"
+            "2517099",
+            "2108844303",
+            "2184079980"
         ]
     },
     {
@@ -525,10 +493,39 @@
         "citationCount": 153,
         "influentialCitationCount": 11,
         "reviewers": [
-            "2964640",
-            "2142659443",
-            "2115905112",
-            "2171106811"
+            "2113918898",
+            "2117925465",
+            "144281339"
+        ]
+    },
+    {
+        "paperId": "33e332837e91c1048c3ed165cd16bf7607c3bf06",
+        "title": "Issues and Concepts of Graph Database and a Comparative Analysis on list of Graph Database tools",
+        "year": 2020,
+        "firstAuthor": "152781515",
+        "otherAuthors": [
+            "46501582",
+            "105003008",
+            "152125305"
+        ],
+        "venueId": "66c268f7-ba60-443f-919d-e2c297910401",
+        "venue": "International Conference on Computational Collective Intelligence",
+        "venueType": "conference",
+        "abstract": "The work is review in nature and focuses on basic concepts and example on Graph Database with a special focus on list of standard computerized tools available for handling the queries using graph database structure. The implementation benefits of each tool and a comparative analysis on various functionalities has been presented in this work. This work also elaborates on popular Graph Databases tool that includes Allegro Graph, ArangoDB, OrientDB, Infinite Graph ,Neo4j, Titan, FlockDB, Bitsy, StarDog, MongoDB and investigate their acceptance for solving day to day problems.",
+        "keywords": [
+            "Graph Database",
+            "database structure",
+            "basic concepts",
+            "special focus",
+            "standard computerized"
+        ],
+        "citationCount": 11,
+        "influentialCitationCount": 1,
+        "reviewers": [
+            "2158585032",
+            "144352362",
+            "143911374",
+            "2153604994"
         ]
     }
 ]

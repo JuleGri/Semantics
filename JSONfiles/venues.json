@@ -4,7 +4,7 @@
         "venue": "International Symposium on Software Testing and Analysis",
         "year": 2023,
         "type": "conference",
-        "city": "Catania"
+        "city": "Seoul"
     },
     {
         "venueId": "f80a2e54-1332-48bf-9634-4b2f77fca809",
@@ -25,7 +25,7 @@
         "venue": "International Symposium on Software Testing and Analysis",
         "year": 2022,
         "type": "conference",
-        "city": "Hamburg"
+        "city": "Tokyo"
     },
     {
         "venueId": "f1d0ef3d-4e90-41e9-b454-f589a933654f",
@@ -46,7 +46,7 @@
         "venue": "Symposium on Information and Communication Technology",
         "year": 2022,
         "type": "conference",
-        "city": "New York"
+        "city": "Sydney"
     },
     {
         "venueId": "9bc76c9a-64ac-4dd9-902e-80fccca1833f",
@@ -54,13 +54,6 @@
         "year": 2021,
         "type": "journal",
         "volume": "46"
-    },
-    {
-        "venueId": "bb899a20-6789-46e4-9ed0-c7c284028fd9",
-        "venue": "JMIR mHealth and uHealth",
-        "year": 2021,
-        "type": "journal",
-        "volume": "9"
     },
     {
         "venueId": "ccd8e532-73c6-414f-bc91-271bbb2933e2",
@@ -88,7 +81,7 @@
         "venue": "Knowledge Science, Engineering and Management",
         "year": 2020,
         "type": "conference",
-        "city": "Tokyo"
+        "city": "New York"
     },
     {
         "venueId": "f4784c7b-6592-49eb-a116-7290e0398868",
@@ -102,6 +95,13 @@
         "venue": "Alberto Mendelzon Workshop on Foundations of Data Management",
         "year": 2018,
         "type": "Workshop",
-        "city": "San Francisco"
+        "city": "Amsterdam"
+    },
+    {
+        "venueId": "66c268f7-ba60-443f-919d-e2c297910401",
+        "venue": "International Conference on Computational Collective Intelligence",
+        "year": 2020,
+        "type": "conference",
+        "city": "Copenhagen"
     }
 ]
