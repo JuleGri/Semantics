@@ -4,24 +4,22 @@
     1. 
 
 
-   MATCH (p:Paper)-[:PUBLISHED\_IN]->(v:Venue)\\
-WHERE v.type IN ["conference", "workshop"]\\
+    MATCH (p:Paper)-[:PUBLISHED\_IN]->(v:Venue)\\
+    WHERE v.type IN ["conference", "workshop"]\\
 
-WITH v.venue AS venueName, v.year AS year, p
-ORDER BY p.citationCount DESC
-WITH venueName, year, COLLECT({title: p.title, citationCount: p.citationCount})[0..3] AS topPapers
+    WITH v.venue AS venueName, v.year AS year, p
+    ORDER BY p.citationCount DESC
+    WITH venueName, year, COLLECT({title: p.title, citationCount: p.citationCount})[0..3] AS topPapers
 
 
 # 2. Per venue (in general, not one specific edition), find the author community with authors that have published in 4 different editions of that venue
 
-MATCH (a:Author)-[:FIRST_AUTHORED|CO_AUTHORED]->(p:Paper)-[:PUBLISHED_IN]->(v:Venue)
-WHERE v.type IN ["conference", "workshop"]
-WITH a.name AS authorName, v.venue AS venueName, COLLECT(DISTINCT v.year) AS years
-WHERE SIZE(years) >= 4
-RETURN venueName, authorName, SIZE(years) AS editionsPublishedIn
-ORDER BY venueName, editionsPublishedIn DESC;
-
-    
+    MATCH (a:Author)-[:FIRST_AUTHORED|CO_AUTHORED]->(p:Paper)-[:PUBLISHED_IN]->(v:Venue)
+    WHERE v.type IN ["conference", "workshop"]
+    WITH a.name AS authorName, v.venue AS venueName, COLLECT(DISTINCT v.year) AS years
+    WHERE SIZE(years) >= 4
+    RETURN venueName, authorName, SIZE(years) AS editionsPublishedIn
+    ORDER BY venueName, editionsPublishedIn DESC;
 
 
 
@@ -33,13 +31,13 @@ ORDER BY venueName, editionsPublishedIn DESC;
     3. divide the citings from 1. by the papers from 2. 
 
     Cypher Query for 2023:
-    MATCH (citing:Paper)-[:CITES]->(cited:Paper)-[:PUBLISHED_IN]->(j:Journal)
-    WHERE cited.year IN [2021, 2022] AND citing.year = 2023
-    WITH j, COUNT(citing) AS totalCitations
+    MATCH (citing:Paper)-[:CITES]->(cited:Paper)-[:PUBLISHED_IN]->(v:Venue)
+    WHERE v.type = "journal" AND cited.year IN [2021, 2022] AND citing.year = 2023
+    WITH v, COUNT(citing) AS totalCitations
 
     MATCH (j)<-[:PUBLISHED_IN]-(p:Paper)
     WHERE p.year IN [2021, 2022]
-    WITH j.name AS journalName, totalCitations, COUNT(p) AS paperCount
+    WITH v.venue AS journalName, totalCitations, COUNT(p) AS paperCount
     RETURN journalName, 
         totalCitations * 1.0 / paperCount AS impactFactor
     ORDER BY impactFactor DESC;
@@ -70,9 +68,10 @@ ORDER BY venueName, editionsPublishedIn DESC;
     1. list the citation counts of all their papers
     2. order them ascending (to attack the list by its last /highest element)
     3. create an index range that counts the citations in an ascending array from 0 to i
-    4. takes the list from behind lol (sortedcitations[-i-1]) and compares to the amount of papers so far (i+1)
-    5. 
-    
+    4. takes the list from behind lol (sortedcitations[-i-1]) and compares to the amount of papers so far (i+1) 
+    and adds the count of the successfull comparisons to the hcandidates array
+    5. For each author it checks the hCandicdates list count if its zero and if its not, for the highest entry
+
     MATCH (a:Author)-[:FIRST_AUTHORED|CO_AUTHORED]->(p:Paper)
     WITH a.name AS authorName, collect(p.citationCount) AS citations
 
