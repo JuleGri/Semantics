@@ -16,8 +16,8 @@ def run_query(query, params=None):
 
 # 1. 3 most cited papers per venue
 query= """
-MATCH (p:Paper)-[:PUBLISHED\_IN]->(v:Venue)\\
-    WHERE v.type IN ["conference", "workshop"]\\
+MATCH (p:Paper)-[:PUBLISHED_IN]->(v:Venue)
+    WHERE v.type IN ["conference", "workshop"]
 
     WITH v.venue AS venueName, v.year AS year, p
     ORDER BY p.citationCount DESC
