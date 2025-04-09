@@ -29,12 +29,11 @@ run_query(query)
 # 2. Per venue (in general, not one specific edition), find the author community with authors that have published in 4 different editions of that venue
 query= """
 MATCH (a:Author)-[:FIRST_AUTHORED|CO_AUTHORED]->(p:Paper)-[:PUBLISHED_IN]->(v:Venue)
-    WHERE v.type IN ["conference", "workshop"]
-    WITH a.name AS authorName, v.venue AS venueName, COLLECT(DISTINCT v.year) AS years
-    WHERE SIZE(years) >= 4
-    RETURN venueName, authorName, SIZE(years) AS editionsPublishedIn
-    ORDER BY venueName, editionsPublishedIn DESC;
-
+WHERE v.type IN ["conference", "workshop"]
+WITH a.name AS authorName, v.venue AS venueName, COLLECT(DISTINCT v.year) AS years
+WHERE SIZE(years) >= 4
+RETURN venueName, authorName, SIZE(years) AS editionsPublishedIn
+ORDER BY venueName, editionsPublishedIn DESC;
 
 """
 run_query(query)
@@ -42,17 +41,23 @@ run_query(query)
 # 3. Find Impact Factor per Journal
 #Cypher Query for 2023:
 query = """
+WITH [2021, 2022] AS citedYears, 2023 AS citingYear
+
 MATCH (citing:Paper)-[:CITES]->(cited:Paper)-[:PUBLISHED_IN]->(v:Venue)
-    WHERE v.type = "journal" AND cited.year IN [2021, 2022] AND citing.year = 2023
-    WITH v, COUNT(citing) AS totalCitations
+WHERE v.type = "journal" 
+  AND cited.year IN citedYears 
+  AND citing.year = citingYear
 
-    MATCH (j)<-[:PUBLISHED_IN]-(p:Paper)
-    WHERE p.year IN [2021, 2022]
-    WITH v.venue AS journalName, totalCitations, COUNT(p) AS paperCount
-    RETURN journalName, 
-        totalCitations * 1.0 / paperCount AS impactFactor
-    ORDER BY impactFactor DESC;
+WITH v.venue AS journalName, COUNT(citing) AS totalCitations
 
+MATCH (v:Venue)<-[:PUBLISHED_IN]-(p:Paper)
+WHERE v.type = "journal" AND p.year IN citedYears
+WITH journalName, totalCitations, COUNT(p) AS paperCount
+WHERE paperCount > 0
+RETURN journalName, 
+       totalCitations * 1.0 / paperCount AS impactFactor,
+       totalCitations, paperCount
+ORDER BY impactFactor DESC;
     """
 run_query(query)
 

@@ -61,3 +61,4 @@ run_query(query)
 run_query("CALL gds.graph.drop('paperSimilarityGraph')")
 
 # TO BE PROJECTED Venues with similar authors
+
